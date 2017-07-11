@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>64b63b9e-eb0d-4544-9447-9586a857a2fa</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>748bbea9-9de0-45b0-b9b2-712b0a28c804</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dds;dlg;fbx;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{8a941988-c2b3-433e-a2b5-7c8479c0c1e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GameMain">
+      <UniqueIdentifier>{cdee8352-5b56-4067-be6f-c5b81d856fc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Utility">
+      <UniqueIdentifier>{18c54ee1-f786-40d3-a301-8dd14161327f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Utility\Singleton">
+      <UniqueIdentifier>{17986ea4-0a56-4d6c-be5d-55fe69f47e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1">
+      <UniqueIdentifier>{67d2a79c-a1cf-4125-b4ea-cac500a06c0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sprite">
+      <UniqueIdentifier>{b1b36a4a-8d54-427d-986f-6e968368c523}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sprite\SpriteManager">
+      <UniqueIdentifier>{bd810d36-4696-435d-ae14-3362627c5a52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ImputManager">
+      <UniqueIdentifier>{8f3c1952-7d0d-47de-8265-62deae8ae9f1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="StepTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Game1.h">
+      <Filter>Source\Game1</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameBase\GameMain\GameMain.h">
+      <Filter>Source\GameMain</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameBase\Sprite\Sprite.h">
+      <Filter>Source\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameBase\Sprite\SpriteManager\SpriteManager.h">
+      <Filter>Source\Sprite\SpriteManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameBase\Utility\Singleton\Singleton.h">
+      <Filter>Source\Utility\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameBase\ImputManager\InputManager.h">
+      <Filter>Source\ImputManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="DeviceResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Game1.cpp">
+      <Filter>Source\Game1</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameBase\GameMain\GameMain.cpp">
+      <Filter>Source\GameMain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameBase\Sprite\Sprite.cpp">
+      <Filter>Source\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameBase\Sprite\SpriteManager\SpriteManager.cpp">
+      <Filter>Source\Sprite\SpriteManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameBase\ImputManager\InputManager.cpp">
+      <Filter>Source\ImputManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="directx.ico">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="settings.manifest">
+      <Filter>Assets</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
