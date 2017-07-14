@@ -11,7 +11,7 @@
 
 #include "../GameBase/GameMain/GameMain.h"
 
-class Sprite;
+class SceneState;
 
 /////////////////////////////////////////////////////
 // Name : Game
@@ -21,7 +21,7 @@ class Sprite;
 class Game1:public GameMain
 {
 private:
-	std::shared_ptr<Sprite> sprite_;
+	std::shared_ptr<SceneState> scene_;
 
 public:
 	//コンストラクタ

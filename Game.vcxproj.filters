@@ -41,6 +41,12 @@
     <Filter Include="Source\Game1\Player\PlayerState">
       <UniqueIdentifier>{4473eecb-d9b7-4465-bd0e-6115230c44cd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Game1\Scene\SceneState">
+      <UniqueIdentifier>{c9b20159-11c6-476c-9651-3fc142b38c15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Scene\PlayState">
+      <UniqueIdentifier>{7d55e77b-e5c4-4e54-aedd-8d7a6faf7bc2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -72,7 +78,10 @@
     <ClInclude Include="Source\Game1\Player\PlayerState\PlayerState.h">
       <Filter>Source\Game1\Player\PlayerState</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Game1\Scene\SceneState\SceneState.h" />
+    <ClInclude Include="Source\Game1\Scene\SceneState\SceneState.h">
+      <Filter>Source\Game1\Scene\SceneState</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Scene\PlayState\PlayState.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -99,7 +108,12 @@
     <ClCompile Include="Source\Game1\Player\PlayerState\PlayerState.cpp">
       <Filter>Source\Game1\Player\PlayerState</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Game1\Scene\SceneState\SceneState.cpp" />
+    <ClCompile Include="Source\Game1\Scene\SceneState\SceneState.cpp">
+      <Filter>Source\Game1\Scene\SceneState</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Scene\PlayState\PlayState.cpp">
+      <Filter>Source\Game1\Scene\PlayState</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />

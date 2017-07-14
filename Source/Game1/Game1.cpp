@@ -7,14 +7,10 @@
 /////////////////////////////////////////////////////
 #include "../../pch.h"
 #include "Game1.h"
-#include "../GameBase/Sprite/Sprite.h"
+#include "Scene\SceneState\SceneState.h"
+#include "Scene\PlayState\PlayState.h"
 #include "../GameBase/Sprite/SpriteManager/SpriteManager.h"
 #include "../GameBase/ImputManager/InputManager.h"
-
-#include <d3d11.h>
-#include <SimpleMath.h>
-
-using namespace DirectX::SimpleMath;
 
 /////////////////////////////////////////////////////
 // Name : Game1
@@ -25,7 +21,7 @@ using namespace DirectX::SimpleMath;
 /////////////////////////////////////////////////////
 Game1::Game1()
 {
-	sprite_.reset(new Sprite(L"Resources\\Images\\Ball.png"));
+	scene_.reset(new PlayState);
 }
 
 /////////////////////////////////////////////////////
@@ -52,7 +48,7 @@ void Game1::Initialize()
 {
 	GameMain::Initialize();
 
-	sprite_->Initialize(Vector2(300, 400));
+	scene_->Initialize();
 }
 
 /////////////////////////////////////////////////////
@@ -67,6 +63,17 @@ void Game1::Initialize()
 void Game1::Update()
 {
 	GameMain::Update();
+
+	//シーン切り替え
+	auto next = scene_->Input();
+	if (next)
+	{
+		scene_ = next;
+		scene_->Initialize();
+	}
+
+	//シーンの更新
+	scene_->Update();
 }
 
 /////////////////////////////////////////////////////
@@ -86,7 +93,7 @@ void Game1::Render()
 	auto commonState = SpriteManager::GetInstance()->CommonState();
 	spriteBatch->Begin(DirectX::SpriteSortMode_Deferred,commonState->NonPremultiplied(),commonState->PointClamp());
 
-	sprite_->Render();
+	scene_->Render();
 
 	spriteBatch->End();
 }

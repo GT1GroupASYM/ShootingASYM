@@ -25,10 +25,16 @@ public:
 	//デストラクタ
 	virtual ~SceneState();
 
+	//初期化処理
+	virtual void Initialize();
+
 	//次のシーンの取得
-	std::shared_ptr<SceneState> Input();
+	virtual std::shared_ptr<SceneState> Input();
 	
 	//更新処理
-	void Update();
+	virtual void Update();
+
+	//描画処理
+	virtual void Render();
 };
 
