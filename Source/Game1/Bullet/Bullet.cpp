@@ -45,9 +45,11 @@ Bullet::~Bullet()
 //
 // Return : –³‚µ
 /////////////////////////////////////////////////////
-void Bullet::Initialize(Vector2 pos)
+void Bullet::Initialize(Vector2 pos,Vector2 vel)
 {
 	sprite_->Pos(pos);
+	vel_ = vel;
+	vel_.Normalize();
 }
 
 /////////////////////////////////////////////////////
@@ -61,12 +63,6 @@ void Bullet::Initialize(Vector2 pos)
 /////////////////////////////////////////////////////
 void Bullet::Update()
 {
-	Vector2 vel(0.0f, -1.0f);
-
-	vel.Normalize();
-
-	vel_ = vel;
-
 	sprite_->Pos(sprite_->Pos() + vel_ * moveSpeed_);
 }
 

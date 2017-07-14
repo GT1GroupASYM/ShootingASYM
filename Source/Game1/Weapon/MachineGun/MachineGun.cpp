@@ -12,6 +12,8 @@
 #include "../../Bullet/Bullet.h"
 #include "../../Character/Character.h"
 
+using namespace DirectX::SimpleMath;
+
 /////////////////////////////////////////////////////
 // Name : MachineGun
 //
@@ -20,7 +22,7 @@
 // Argument : –³‚µ
 /////////////////////////////////////////////////////
 MachineGun::MachineGun()
-	:waitTime_(0.2f), currentTime_(0.0f)
+	:waitTime_(0.1f), currentTime_(0.0f)
 {
 }
 
@@ -68,10 +70,18 @@ void MachineGun::Update(Character& character)
 	auto mouse = InputManager::GetInstance()->Mouse();
 	if (mouse->GetState().leftButton)
 	{
+		auto x = mouse->GetState().x;
+		auto y = mouse->GetState().y;
+		auto pos = character.Pos();
+		auto vel = Vector2(x, y) - pos;
+
+		//’e‚Ì¶¬
 		std::shared_ptr<Bullet> bullet;
 		bullet.reset(new Bullet);
-		bullet->Initialize(character.Pos());
+		bullet->Initialize(pos, vel);
 		BulletManager::GetInstance()->Add(bullet);
+
+		//ƒ}ƒVƒ“ƒKƒ“‚Ì‘Ò‹@ŠÔ‚Ì‰Šú‰»
 		currentTime_ = 0.0f;
 	}
 }
