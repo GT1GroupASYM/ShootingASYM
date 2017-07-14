@@ -19,12 +19,12 @@ using namespace Math;
 //
 // Argument : ‰æ‘œ‚ÌƒpƒX
 /////////////////////////////////////////////////////
-Sprite::Sprite(wchar_t* texturePass)
-	:texture_(nullptr),pos_(Vector2::Zero)
+Sprite::Sprite(wchar_t* texturePass,RECT rect)
+	:texture_(nullptr),pos_(Vector2::Zero),rect_(rect)
 	,rot_(0.0f),scale_(1.0f),origine_(Vector2::Zero)
 	,color_(Colors::White)
 {
-	texture_ = SpriteManager::GetInstance()->LoadTexture(texturePass, rect_);
+	texture_ = SpriteManager::GetInstance()->LoadTexture(texturePass);
 }
 
 /////////////////////////////////////////////////////

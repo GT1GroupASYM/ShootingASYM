@@ -40,7 +40,7 @@ public:
 	void Initialize();
 
 	//‰æ‘œ‚Ì“Ç‚İ‚İ
-	ID3D11ShaderResourceView* LoadTexture(wchar_t* pass ,RECT& rect);
+	ID3D11ShaderResourceView* LoadTexture(wchar_t* pass);
 
 	//SpriteBatch‚Ìæ“¾
 	std::shared_ptr<DirectX::SpriteBatch> SpriteBatch();

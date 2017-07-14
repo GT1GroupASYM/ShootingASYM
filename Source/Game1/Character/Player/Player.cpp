@@ -9,31 +9,29 @@
 #include "Player.h"
 #include "PlayerState\PlayerState.h"
 #include "PlayerState\PlayerNormalState\PlayerNormalState.h"
+#include "../../Weapon/MachineGun/MachineGun.h"
 
 
 /////////////////////////////////////////////////////
-// Name : Initialize
+// Name : Player
 //
-// Over View : 初期化処理
+// Over View : コンストラクタ
 //
 // Argument : 無し
-//
-// Return : 無し
 /////////////////////////////////////////////////////
-Player::Player(wchar_t* texturePass)
-	:Character(texturePass)
+Player::Player(wchar_t* texturePass,RECT rect)
+	:Character(texturePass,rect)
 {
 	state_.reset(new PlayerNormalState);
+	weapon_.reset(new MachineGun);
 }
 
 /////////////////////////////////////////////////////
-// Name : Initialize
+// Name : ~Player
 //
-// Over View : 初期化処理
+// Over View : デストラクタ
 //
 // Argument : 無し
-//
-// Return : 無し
 /////////////////////////////////////////////////////
 Player::~Player()
 {
@@ -53,9 +51,9 @@ void Player::Initialize()
 }
 
 /////////////////////////////////////////////////////
-// Name : Initialize
+// Name : Update
 //
-// Over View : 初期化処理
+// Over View : 更新処理
 //
 // Argument : 無し
 //
@@ -75,9 +73,9 @@ void Player::Update()
 }
 
 /////////////////////////////////////////////////////
-// Name : Initialize
+// Name : Render
 //
-// Over View : 初期化処理
+// Over View : 描画処理
 //
 // Argument : 無し
 //

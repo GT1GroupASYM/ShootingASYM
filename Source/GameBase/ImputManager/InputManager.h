@@ -54,6 +54,9 @@ public:
 	//指定したキーが押されてるか
 	bool KeyInput(DirectX::Keyboard::Keys key);
 
+	//マウスの取得
+	DirectX::Mouse* Mouse();
+
 	//マウストラッカーの取得
 	DirectX::Mouse::ButtonStateTracker* MouseTacker();
 

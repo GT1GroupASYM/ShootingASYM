@@ -69,7 +69,7 @@ void SpriteManager::Initialize()
 //
 // Return : 画像のポインタ
 /////////////////////////////////////////////////////
-ID3D11ShaderResourceView* SpriteManager::LoadTexture(wchar_t* pass,RECT& rect)
+ID3D11ShaderResourceView* SpriteManager::LoadTexture(wchar_t* pass)
 {
 	//読み込んだことがなかったら読み込み
 	if (shaderResourceViewPool_.count(pass) <= 0)
@@ -80,17 +80,6 @@ ID3D11ShaderResourceView* SpriteManager::LoadTexture(wchar_t* pass,RECT& rect)
 
 		//画像の読み込み
 		DirectX::CreateWICTextureFromFile(device, pass, &resource, &shaderResourceView);
-
-		//画像サイズの取得
-		auto texture = static_cast<ID3D11Texture2D*>(resource);
-		D3D11_TEXTURE2D_DESC desc;
-		texture->GetDesc(&desc);
-		rect.top = 0;
-		rect.left = 0;
-		rect.bottom = desc.Height;
-		rect.right = desc.Width;
-
-		resource->Release();
 
 		shaderResourceViewPool_[pass] = shaderResourceView;
 	}

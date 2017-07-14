@@ -106,6 +106,29 @@ bool InputManager::KeyInput(DirectX::Keyboard::Keys key)
 	return false;
 }
 
+/////////////////////////////////////////////////////
+// Name : Mouse
+//
+// Over View : マウスの取得
+//
+// Argument : 無し
+//
+// Return : マウス
+/////////////////////////////////////////////////////
+DirectX::Mouse * InputManager::Mouse()
+{
+	return mouse_.get();
+}
+
+/////////////////////////////////////////////////////
+// Name : MouseTracker
+//
+// Over View : マウストラッカーの取得
+//
+// Argument : 無し
+//
+// Return : マウスのトラッカー
+/////////////////////////////////////////////////////
 DirectX::Mouse::ButtonStateTracker* InputManager::MouseTacker()
 {
 	return mouseTracker_.get();

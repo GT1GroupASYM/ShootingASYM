@@ -9,6 +9,8 @@
 
 #include "../SceneState/SceneState.h"
 
+class Player;
+
 /////////////////////////////////////////////////////
 // Name : PlayState
 //
@@ -17,6 +19,7 @@
 class PlayState:public SceneState
 {
 private:
+	std::shared_ptr<Player> player_;
 
 public:
 	//コンストラクタ

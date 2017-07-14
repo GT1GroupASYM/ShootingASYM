@@ -10,6 +10,8 @@
 #include "../Character.h"
 
 class PlayerState;
+class Weapon;
+class PlayerNormalState;
 
 /////////////////////////////////////////////////////
 // Name : Player
@@ -20,10 +22,13 @@ class Player :public Character
 {
 private:
 	std::shared_ptr<PlayerState> state_;
+	std::shared_ptr<Weapon> weapon_;
+
+	friend PlayerNormalState;
 
 public:
 	//コンストラクタ
-	Player(wchar_t* texturePass);
+	Player(wchar_t* texturePass,RECT rect);
 
 	//デストラクタ
 	~Player();

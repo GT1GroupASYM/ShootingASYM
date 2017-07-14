@@ -44,7 +44,7 @@ private:
 
 public:
 	//コンストラクタ
-	Sprite(wchar_t* texturePass);
+	Sprite(wchar_t* texturePass,RECT rect);
 
 	//デストラクタ
 	~Sprite();

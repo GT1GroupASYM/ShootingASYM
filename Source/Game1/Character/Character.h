@@ -33,7 +33,7 @@ protected:
 
 public:
 	//コンストラクタ
-	Character(wchar_t* texturePass);
+	Character(wchar_t* texturePass,RECT rect);
 
 	//デストラクタ
 	virtual ~Character();
@@ -46,4 +46,7 @@ public:
 	
 	//描画処理
 	virtual void Render();
+
+	//座標の取得
+	Math::Vector2 Pos();
 };

@@ -35,7 +35,7 @@ public:
 	Bullet();
 	virtual ~Bullet();
 
-	virtual void Initialize();
+	virtual void Initialize(Math::Vector2 pos);
 	virtual void Update();
 	virtual void Render();
 };

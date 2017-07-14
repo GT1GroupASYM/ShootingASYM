@@ -34,4 +34,5 @@ std::shared_ptr<PlayerState> PlayerState::Input(Player& player)
 /////////////////////////////////////////////////////
 void PlayerState::Update(Player& player)
 {
+
 }

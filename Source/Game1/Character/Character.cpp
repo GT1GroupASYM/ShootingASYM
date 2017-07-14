@@ -18,10 +18,10 @@ using namespace Math;
 //
 // Argument : –³‚µ
 /////////////////////////////////////////////////////
-Character::Character(wchar_t* texturePass)
-	:vel_(Vector2::Zero), moveSpeed_(1.0f)
+Character::Character(wchar_t* texturePass,RECT rect)
+	:vel_(Vector2::Zero), moveSpeed_(3.0f)
 {
-	sprite_.reset(new Sprite(texturePass));
+	sprite_.reset(new Sprite(texturePass,rect));
 }
 
 /////////////////////////////////////////////////////
@@ -74,4 +74,18 @@ void Character::Update()
 void Character::Render()
 {
 	sprite_->Render();
+}
+
+/////////////////////////////////////////////////////
+// Name : Pos
+//
+// Over View : À•W‚ÌŽæ“¾
+//
+// Argument : –³‚µ
+//
+// Return : À•W
+/////////////////////////////////////////////////////
+Math::Vector2 Character::Pos()
+{
+	return sprite_->Pos();
 }

@@ -7,6 +7,8 @@
 /////////////////////////////////////////////////////
 #include "../../../../pch.h"
 #include "PlayState.h"
+#include "../../Character/Player/Player.h"
+#include "../../BulletManager/BulletManager.h"
 
 /////////////////////////////////////////////////////
 // Name : PlayState
@@ -18,6 +20,8 @@
 PlayState::PlayState()
 	:SceneState()
 {
+	RECT rect{ 0,0,32,32 };
+	player_.reset(new Player(L"Resources\\Images\\Ball.png",rect));
 }
 
 /////////////////////////////////////////////////////
@@ -42,6 +46,9 @@ PlayState::~PlayState()
 /////////////////////////////////////////////////////
 void PlayState::Initialize()
 {
+	player_->Initialize();
+
+	BulletManager::GetInstance()->Initialize();
 }
 
 /////////////////////////////////////////////////////
@@ -71,6 +78,9 @@ std::shared_ptr<SceneState> PlayState::Input()
 /////////////////////////////////////////////////////
 void PlayState::Update()
 {
+	player_->Update();
+
+	BulletManager::GetInstance()->Update();
 }
 
 /////////////////////////////////////////////////////
@@ -84,4 +94,7 @@ void PlayState::Update()
 /////////////////////////////////////////////////////
 void PlayState::Render()
 {
+	player_->Render();
+
+	BulletManager::GetInstance()->Render();
 }

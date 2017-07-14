@@ -62,6 +62,12 @@
     <Filter Include="Source\Game1\Weapon">
       <UniqueIdentifier>{6993ae02-0382-4551-8e18-2cac089cf0ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Game1\Weapon\PlayerMachineGun">
+      <UniqueIdentifier>{f852e343-a7c3-4be0-8179-ef7aa1971541}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\BulletManager">
+      <UniqueIdentifier>{ebcd9b24-f786-4f77-85cd-0d6cad331743}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -114,8 +120,15 @@
     <ClInclude Include="Source\Game1\Bullet\Bullet.h">
       <Filter>Source\Game1\Bullet</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Game1\Bullet\PlayerBullet\PlayerMachineGun\PlayerMachineGun.h" />
-    <ClInclude Include="Source\Game1\Weapon\Weapon.h" />
+    <ClInclude Include="Source\Game1\Weapon\Weapon.h">
+      <Filter>Source\Game1\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\BulletManager\BulletManager.h">
+      <Filter>Source\Game1\BulletManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Weapon\MachineGun\MachineGun.h">
+      <Filter>Source\Game1\Weapon\PlayerMachineGun</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -163,8 +176,15 @@
     <ClCompile Include="Source\Game1\Bullet\Bullet.cpp">
       <Filter>Source\Game1\Bullet</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Game1\Bullet\PlayerBullet\PlayerMachineGun\PlayerMachineGun.cpp" />
-    <ClCompile Include="Source\Game1\Weapon\Weapon.cpp" />
+    <ClCompile Include="Source\Game1\Weapon\Weapon.cpp">
+      <Filter>Source\Game1\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\BulletManager\BulletManager.cpp">
+      <Filter>Source\Game1\BulletManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Weapon\MachineGun\MachineGun.cpp">
+      <Filter>Source\Game1\Weapon\PlayerMachineGun</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />

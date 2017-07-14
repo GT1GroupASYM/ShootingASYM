@@ -19,8 +19,10 @@ using namespace Math;
 // Argument : –³‚µ
 /////////////////////////////////////////////////////
 Bullet::Bullet()
-	:vel_(Vector2::Zero), moveSpeed_(1.0f)
+	:vel_(Vector2::Zero), moveSpeed_(15.0f)
 {
+	RECT rect{ 0,0,32,32 };
+	sprite_.reset(new Sprite(L"Resources\\Images\\Ball.png",rect));
 }
 
 /////////////////////////////////////////////////////
@@ -43,8 +45,9 @@ Bullet::~Bullet()
 //
 // Return : –³‚µ
 /////////////////////////////////////////////////////
-void Bullet::Initialize()
+void Bullet::Initialize(Vector2 pos)
 {
+	sprite_->Pos(pos);
 }
 
 /////////////////////////////////////////////////////
@@ -58,6 +61,12 @@ void Bullet::Initialize()
 /////////////////////////////////////////////////////
 void Bullet::Update()
 {
+	Vector2 vel(0.0f, -1.0f);
+
+	vel.Normalize();
+
+	vel_ = vel;
+
 	sprite_->Pos(sprite_->Pos() + vel_ * moveSpeed_);
 }
 

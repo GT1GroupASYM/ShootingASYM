@@ -7,6 +7,8 @@
 /////////////////////////////////////////////////////
 #pragma once
 
+class Character;
+
 /////////////////////////////////////////////////////
 // Name : Bullet
 //
@@ -27,7 +29,7 @@ public:
 	virtual void Initialize();
 	
 	//XVˆ—
-	virtual void Update();
+	virtual void Update(Character& character);
 	
 	//•`‰æˆ—
 	virtual void Render();

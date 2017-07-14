@@ -52,7 +52,7 @@ void Weapon::Initialize()
 //
 // Return : –³‚µ
 /////////////////////////////////////////////////////
-void Weapon::Update()
+void Weapon::Update(Character& character)
 {
 }
 
