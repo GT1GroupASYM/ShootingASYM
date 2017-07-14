@@ -1,0 +1,63 @@
+/////////////////////////////////////////////////////
+// Name : PlayerInvicibleState
+//
+// Author : 山田 聖弥
+//
+// Day : 2017/7/14
+/////////////////////////////////////////////////////
+#include "../../../../../pch.h"
+#include "PlayerInvicibleState.h"
+#include "../PlayerNormalState/PlayerNormalState.h"
+
+/////////////////////////////////////////////////////
+// Name : PlayerInvicibleState
+//
+// Over View : コンストラクタ
+//
+// Argument : 無し
+/////////////////////////////////////////////////////
+PlayerInvicibleState::PlayerInvicibleState()
+{
+}
+
+/////////////////////////////////////////////////////
+// Name : ~PlayerInvicibleState
+//
+// Over View : デストラクタ
+//
+// Argument : 無し
+/////////////////////////////////////////////////////
+PlayerInvicibleState::~PlayerInvicibleState()
+{
+}
+
+/////////////////////////////////////////////////////
+// Name : Input
+//
+// Over View : 状態の切り替え
+//
+// Argument : プレイヤーへの参照
+//
+// Return : 次の状態
+/////////////////////////////////////////////////////
+std::shared_ptr<PlayerState> PlayerInvicibleState::Input(Player & player)
+{
+	std::shared_ptr<PlayerState> next = nullptr;
+
+	return next;
+}
+
+/////////////////////////////////////////////////////
+// Name : Update
+//
+// Over View : 更新処理変更
+//
+// Argument : プレイヤーへの参照
+//
+// Return : 無し
+/////////////////////////////////////////////////////
+void PlayerInvicibleState::Update(Player & player)
+{
+	PlayerNormalState normalState;
+	normalState.Update(player);
+}

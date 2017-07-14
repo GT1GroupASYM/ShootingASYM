@@ -35,17 +35,26 @@
     <Filter Include="Source\Game1\Scene">
       <UniqueIdentifier>{36dfbe2f-54e7-4cff-87ef-57dca422c144}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Game1\Player">
-      <UniqueIdentifier>{b4cebd41-8c29-4a41-af19-7ebd0f000a8d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Game1\Player\PlayerState">
-      <UniqueIdentifier>{4473eecb-d9b7-4465-bd0e-6115230c44cd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Game1\Scene\SceneState">
       <UniqueIdentifier>{c9b20159-11c6-476c-9651-3fc142b38c15}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Game1\Scene\PlayState">
       <UniqueIdentifier>{7d55e77b-e5c4-4e54-aedd-8d7a6faf7bc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Character">
+      <UniqueIdentifier>{9609cd98-6e0d-4b92-9b57-755cd9df523f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Character\Player">
+      <UniqueIdentifier>{b4cebd41-8c29-4a41-af19-7ebd0f000a8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Character\Player\PlayerState">
+      <UniqueIdentifier>{4473eecb-d9b7-4465-bd0e-6115230c44cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Character\Player\PlayerState\PlayerNormalState">
+      <UniqueIdentifier>{eb9be4e1-dfc0-4065-aef0-e039d8588ab7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Character\Player\PlayerState\PlayerInvicibleState">
+      <UniqueIdentifier>{327f1a21-6386-45d9-b62c-7f245f14c278}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -75,13 +84,27 @@
     <ClInclude Include="Source\GameBase\ImputManager\InputManager.h">
       <Filter>Source\ImputManager</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Game1\Player\PlayerState\PlayerState.h">
-      <Filter>Source\Game1\Player\PlayerState</Filter>
+    <ClInclude Include="Source\Game1\Scene\PlayState\PlayState.h">
+      <Filter>Source\Game1\Scene\PlayState</Filter>
     </ClInclude>
     <ClInclude Include="Source\Game1\Scene\SceneState\SceneState.h">
       <Filter>Source\Game1\Scene\SceneState</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Game1\Scene\PlayState\PlayState.h" />
+    <ClInclude Include="Source\Game1\Character\Player\Player.h">
+      <Filter>Source\Game1\Character\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Character\Player\PlayerState\PlayerState.h">
+      <Filter>Source\Game1\Character\Player\PlayerState</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Character\Character.h">
+      <Filter>Source\Game1\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Character\Player\PlayerState\PlayerInvicibleState\PlayerInvicibleState.h">
+      <Filter>Source\Game1\Character\Player\PlayerState\PlayerInvicibleState</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Character\Player\PlayerState\PlayerNormalState\PlayerNormalState.h">
+      <Filter>Source\Game1\Character\Player\PlayerState\PlayerNormalState</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -105,14 +128,26 @@
     <ClCompile Include="Source\GameBase\ImputManager\InputManager.cpp">
       <Filter>Source\ImputManager</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Game1\Player\PlayerState\PlayerState.cpp">
-      <Filter>Source\Game1\Player\PlayerState</Filter>
+    <ClCompile Include="Source\Game1\Scene\PlayState\PlayState.cpp">
+      <Filter>Source\Game1\Scene\PlayState</Filter>
     </ClCompile>
     <ClCompile Include="Source\Game1\Scene\SceneState\SceneState.cpp">
       <Filter>Source\Game1\Scene\SceneState</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Game1\Scene\PlayState\PlayState.cpp">
-      <Filter>Source\Game1\Scene\PlayState</Filter>
+    <ClCompile Include="Source\Game1\Character\Player\Player.cpp">
+      <Filter>Source\Game1\Character\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Character\Player\PlayerState\PlayerState.cpp">
+      <Filter>Source\Game1\Character\Player\PlayerState</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Character\Character.cpp">
+      <Filter>Source\Game1\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Character\Player\PlayerState\PlayerNormalState\PlayerNormalState.cpp">
+      <Filter>Source\Game1\Character\Player\PlayerState\PlayerNormalState</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Character\Player\PlayerState\PlayerInvicibleState\PlayerInvicibleState.cpp">
+      <Filter>Source\Game1\Character\Player\PlayerState\PlayerInvicibleState</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

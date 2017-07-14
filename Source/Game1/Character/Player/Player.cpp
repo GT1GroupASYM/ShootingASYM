@@ -1,0 +1,89 @@
+/////////////////////////////////////////////////////
+// Name : Player
+//
+// Author : R“c ¹–í
+//
+// Day : 2017/7/14
+/////////////////////////////////////////////////////
+#include "../../../../pch.h"
+#include "Player.h"
+#include "PlayerState\PlayerState.h"
+#include "PlayerState\PlayerNormalState\PlayerNormalState.h"
+
+
+/////////////////////////////////////////////////////
+// Name : Initialize
+//
+// Over View : ‰Šú‰»ˆ—
+//
+// Argument : –³‚µ
+//
+// Return : –³‚µ
+/////////////////////////////////////////////////////
+Player::Player(wchar_t* texturePass)
+	:Character(texturePass)
+{
+	state_.reset(new PlayerNormalState);
+}
+
+/////////////////////////////////////////////////////
+// Name : Initialize
+//
+// Over View : ‰Šú‰»ˆ—
+//
+// Argument : –³‚µ
+//
+// Return : –³‚µ
+/////////////////////////////////////////////////////
+Player::~Player()
+{
+}
+
+/////////////////////////////////////////////////////
+// Name : Initialize
+//
+// Over View : ‰Šú‰»ˆ—
+//
+// Argument : –³‚µ
+//
+// Return : –³‚µ
+/////////////////////////////////////////////////////
+void Player::Initialize()
+{
+}
+
+/////////////////////////////////////////////////////
+// Name : Initialize
+//
+// Over View : ‰Šú‰»ˆ—
+//
+// Argument : –³‚µ
+//
+// Return : –³‚µ
+/////////////////////////////////////////////////////
+void Player::Update()
+{
+	auto next = state_->Input(*this);
+	if (next)
+	{
+		state_ = next;
+	}
+
+	state_->Update(*this);
+
+	Character::Update();
+}
+
+/////////////////////////////////////////////////////
+// Name : Initialize
+//
+// Over View : ‰Šú‰»ˆ—
+//
+// Argument : –³‚µ
+//
+// Return : –³‚µ
+/////////////////////////////////////////////////////
+void Player::Render()
+{
+	Character::Render();
+}
