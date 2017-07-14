@@ -56,6 +56,9 @@
     <Filter Include="Source\Game1\Character\Player\PlayerState\PlayerInvicibleState">
       <UniqueIdentifier>{327f1a21-6386-45d9-b62c-7f245f14c278}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Game1\Bullet">
+      <UniqueIdentifier>{8dbf3ae6-0fb6-4bfd-bca2-e01c9dcc4f90}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -105,6 +108,7 @@
     <ClInclude Include="Source\Game1\Character\Player\PlayerState\PlayerNormalState\PlayerNormalState.h">
       <Filter>Source\Game1\Character\Player\PlayerState\PlayerNormalState</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Game1\Bullet\Bullet.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -149,6 +153,7 @@
     <ClCompile Include="Source\Game1\Character\Player\PlayerState\PlayerInvicibleState\PlayerInvicibleState.cpp">
       <Filter>Source\Game1\Character\Player\PlayerState\PlayerInvicibleState</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Game1\Bullet\Bullet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />

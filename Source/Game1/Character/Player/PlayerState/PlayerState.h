@@ -18,7 +18,7 @@ class Player;
 /////////////////////////////////////////////////////
 class PlayerState
 {
-private:
+protected:
 
 	//コンストラクタ
 	PlayerState() {}

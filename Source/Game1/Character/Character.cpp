@@ -19,7 +19,7 @@ using namespace Math;
 // Argument : –³‚µ
 /////////////////////////////////////////////////////
 Character::Character(wchar_t* texturePass)
-	:vel_(Vector2::Zero), moveSpeed_(0.0f)
+	:vel_(Vector2::Zero), moveSpeed_(1.0f)
 {
 	sprite_.reset(new Sprite(texturePass));
 }
