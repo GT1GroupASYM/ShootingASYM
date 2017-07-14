@@ -155,7 +155,8 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Source\Game1\Game1.h" />
-    <ClInclude Include="Source\Game1\PlayerState\PlayerState.h" />
+    <ClInclude Include="Source\Game1\Player\PlayerState\PlayerState.h" />
+    <ClInclude Include="Source\Game1\Scene\SceneState\SceneState.h" />
     <ClInclude Include="Source\GameBase\GameMain\GameMain.h" />
     <ClInclude Include="Source\GameBase\ImputManager\InputManager.h" />
     <ClInclude Include="Source\GameBase\Sprite\Sprite.h" />
@@ -174,7 +175,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Source\Game1\Game1.cpp" />
-    <ClCompile Include="Source\Game1\PlayerState\PlayerState.cpp" />
+    <ClCompile Include="Source\Game1\Player\PlayerState\PlayerState.cpp" />
+    <ClCompile Include="Source\Game1\Scene\SceneState\SceneState.cpp" />
     <ClCompile Include="Source\GameBase\GameMain\GameMain.cpp" />
     <ClCompile Include="Source\GameBase\ImputManager\InputManager.cpp" />
     <ClCompile Include="Source\GameBase\Sprite\Sprite.cpp" />

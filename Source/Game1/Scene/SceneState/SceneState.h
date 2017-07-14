@@ -1,0 +1,34 @@
+/////////////////////////////////////////////////////
+// Name : SceneState
+//
+// Author : 山田 聖弥
+//
+// Day : 2017/7/14
+/////////////////////////////////////////////////////
+#pragma once
+
+#include <memory>
+
+/////////////////////////////////////////////////////
+// Name : SceneState
+//
+// Over View : シーンの基底クラス
+/////////////////////////////////////////////////////
+class SceneState
+{
+private:
+
+public:
+	//コンストラクタ
+	SceneState();
+
+	//デストラクタ
+	virtual ~SceneState();
+
+	//次のシーンの取得
+	std::shared_ptr<SceneState> Input();
+	
+	//更新処理
+	void Update();
+};
+

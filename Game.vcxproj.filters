@@ -32,7 +32,13 @@
     <Filter Include="Source\ImputManager">
       <UniqueIdentifier>{8f3c1952-7d0d-47de-8265-62deae8ae9f1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Game1\PlayerState">
+    <Filter Include="Source\Game1\Scene">
+      <UniqueIdentifier>{36dfbe2f-54e7-4cff-87ef-57dca422c144}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Player">
+      <UniqueIdentifier>{b4cebd41-8c29-4a41-af19-7ebd0f000a8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Player\PlayerState">
       <UniqueIdentifier>{4473eecb-d9b7-4465-bd0e-6115230c44cd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -63,9 +69,10 @@
     <ClInclude Include="Source\GameBase\ImputManager\InputManager.h">
       <Filter>Source\ImputManager</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Game1\PlayerState\PlayerState.h">
-      <Filter>Source\Game1\PlayerState</Filter>
+    <ClInclude Include="Source\Game1\Player\PlayerState\PlayerState.h">
+      <Filter>Source\Game1\Player\PlayerState</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Game1\Scene\SceneState\SceneState.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -89,9 +96,10 @@
     <ClCompile Include="Source\GameBase\ImputManager\InputManager.cpp">
       <Filter>Source\ImputManager</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Game1\PlayerState\PlayerState.cpp">
-      <Filter>Source\Game1\PlayerState</Filter>
+    <ClCompile Include="Source\Game1\Player\PlayerState\PlayerState.cpp">
+      <Filter>Source\Game1\Player\PlayerState</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Game1\Scene\SceneState\SceneState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
