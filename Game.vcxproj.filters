@@ -59,6 +59,9 @@
     <Filter Include="Source\Game1\Bullet">
       <UniqueIdentifier>{8dbf3ae6-0fb6-4bfd-bca2-e01c9dcc4f90}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Game1\Weapon">
+      <UniqueIdentifier>{6993ae02-0382-4551-8e18-2cac089cf0ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -108,7 +111,11 @@
     <ClInclude Include="Source\Game1\Character\Player\PlayerState\PlayerNormalState\PlayerNormalState.h">
       <Filter>Source\Game1\Character\Player\PlayerState\PlayerNormalState</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Game1\Bullet\Bullet.h" />
+    <ClInclude Include="Source\Game1\Bullet\Bullet.h">
+      <Filter>Source\Game1\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Bullet\PlayerBullet\PlayerMachineGun\PlayerMachineGun.h" />
+    <ClInclude Include="Source\Game1\Weapon\Weapon.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -153,7 +160,11 @@
     <ClCompile Include="Source\Game1\Character\Player\PlayerState\PlayerInvicibleState\PlayerInvicibleState.cpp">
       <Filter>Source\Game1\Character\Player\PlayerState\PlayerInvicibleState</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Game1\Bullet\Bullet.cpp" />
+    <ClCompile Include="Source\Game1\Bullet\Bullet.cpp">
+      <Filter>Source\Game1\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Bullet\PlayerBullet\PlayerMachineGun\PlayerMachineGun.cpp" />
+    <ClCompile Include="Source\Game1\Weapon\Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
