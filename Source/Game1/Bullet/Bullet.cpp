@@ -23,6 +23,7 @@ Bullet::Bullet()
 {
 	RECT rect{ 0,0,32,32 };
 	sprite_.reset(new Sprite(L"Resources\\Images\\Ball.png",rect));
+	sprite_->Origine(Vector2(rect.bottom / 2, rect.right / 2));
 }
 
 /////////////////////////////////////////////////////

@@ -68,6 +68,9 @@
     <Filter Include="Source\Game1\BulletManager">
       <UniqueIdentifier>{ebcd9b24-f786-4f77-85cd-0d6cad331743}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Game1\Weapon\Twins">
+      <UniqueIdentifier>{29d2cce1-d99a-4057-838b-417415401764}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -129,6 +132,9 @@
     <ClInclude Include="Source\Game1\Weapon\MachineGun\MachineGun.h">
       <Filter>Source\Game1\Weapon\PlayerMachineGun</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Game1\Weapon\Twins\Twins.h">
+      <Filter>Source\Game1\Weapon\Twins</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -184,6 +190,9 @@
     </ClCompile>
     <ClCompile Include="Source\Game1\Weapon\MachineGun\MachineGun.cpp">
       <Filter>Source\Game1\Weapon\PlayerMachineGun</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Weapon\Twins\Twins.cpp">
+      <Filter>Source\Game1\Weapon\Twins</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

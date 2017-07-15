@@ -76,10 +76,9 @@ ID3D11ShaderResourceView* SpriteManager::LoadTexture(wchar_t* pass)
 	{
 		auto device = DeviceResources::GetInstance()->GetD3DDevice();
 		ID3D11ShaderResourceView* shaderResourceView;
-		ID3D11Resource* resource;
 
 		//‰æ‘œ‚Ì“Ç‚İ‚İ
-		DirectX::CreateWICTextureFromFile(device, pass, &resource, &shaderResourceView);
+		DirectX::CreateWICTextureFromFile(device, pass, nullptr, &shaderResourceView);
 
 		shaderResourceViewPool_[pass] = shaderResourceView;
 	}

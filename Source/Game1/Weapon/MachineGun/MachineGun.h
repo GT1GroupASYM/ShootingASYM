@@ -17,8 +17,10 @@
 class MachineGun :public Weapon
 {
 private:
+	//’e‚Ì‘Å‚Â‘¬‚³
 	float waitTime_;
 
+	//Œo‰ßŽžŠÔ
 	float currentTime_;
 
 public:

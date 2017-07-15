@@ -10,6 +10,7 @@
 #include "PlayerState\PlayerState.h"
 #include "PlayerState\PlayerNormalState\PlayerNormalState.h"
 #include "../../Weapon/MachineGun/MachineGun.h"
+#include "../../Weapon/Twins/Twins.h"
 
 
 /////////////////////////////////////////////////////
@@ -23,7 +24,7 @@ Player::Player(wchar_t* texturePass,RECT rect)
 	:Character(texturePass,rect)
 {
 	state_.reset(new PlayerNormalState);
-	weapon_.reset(new MachineGun);
+	weapon_.reset(new Twins);
 }
 
 /////////////////////////////////////////////////////
