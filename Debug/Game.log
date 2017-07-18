@@ -1,3 +1,6 @@
-﻿     ライブラリ C:\Users\s152227\Documents\ShootingASYM\Debug\Game.lib とオブジェクト C:\Users\s152227\Documents\ShootingASYM\Debug\Game.exp を作成中
+﻿  Twins.cpp
+c:\users\s152227\documents\shootingasym\pch.h(9): warning C4005: '_WIN32_WINNT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\shared\sdkddkver.h(209): note: '_WIN32_WINNT' の以前の定義を確認してください
+c:\users\s152227\documents\shootingasym\source\game1\weapon\twins\twins.cpp(103): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
   Game.vcxproj -> C:\Users\s152227\Documents\ShootingASYM\Debug\Game.exe
   Game.vcxproj -> C:\Users\s152227\Documents\ShootingASYM\Debug\Game.pdb (Full PDB)

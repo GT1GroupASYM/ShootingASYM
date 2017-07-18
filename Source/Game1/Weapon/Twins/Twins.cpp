@@ -20,6 +20,22 @@
 using namespace DirectX::SimpleMath;
 
 /////////////////////////////////////////////////////
+// Name : CalcPower
+//
+// Over View : レベルから攻撃力を算出
+//
+// Argument : 無し
+//
+// Return : 攻撃力
+/////////////////////////////////////////////////////
+int Twins::CalcPower()
+{
+	auto power = 0;
+
+	return power;
+}
+
+/////////////////////////////////////////////////////
 // Name : Twins
 //
 // Over View : コンストラクタ
@@ -27,7 +43,8 @@ using namespace DirectX::SimpleMath;
 // Argument : 無し
 /////////////////////////////////////////////////////
 Twins::Twins()
-	:waitTime_(0.1f),currentTime_(0.0f)
+	:Weapon(18),waitTime_(0.3f)
+	,currentTime_(0.0f),dir_(1)
 {
 }
 
@@ -75,19 +92,20 @@ void Twins::Update(Character & character)
 	auto mouse = InputManager::GetInstance()->Mouse();
 	if (mouse->GetState().leftButton)
 	{
-		auto x = mouse->GetState().x;
-		auto y = mouse->GetState().y;
+		auto x = (float)mouse->GetState().x;
+		auto y = (float)mouse->GetState().y;
 		auto pos = character.Pos();
 		auto vel = Vector2(x, y) - pos;
 
 		//弾の生成
 		std::shared_ptr<Bullet> bullet;
 		bullet.reset(new Bullet);
-		bullet->Initialize(pos, vel);
+		bullet->Initialize(pos, vel * dir_, power_);
+		bullet->Scale(1 + (level_ - 1) * bulletIncreaseValue_);
 		BulletManager::GetInstance()->Add(bullet);
-		bullet.reset(new Bullet);
-		bullet->Initialize(pos, -vel);
-		BulletManager::GetInstance()->Add(bullet);
+
+		//攻撃の向きの変更
+		dir_ *= -1;
 
 		//マシンガンの待機時間の初期化
 		currentTime_ = 0.0f;

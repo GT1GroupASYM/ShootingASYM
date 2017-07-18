@@ -20,6 +20,7 @@ using namespace Math;
 /////////////////////////////////////////////////////
 Bullet::Bullet()
 	:vel_(Vector2::Zero), moveSpeed_(15.0f)
+	,power_(0)
 {
 	RECT rect{ 0,0,32,32 };
 	sprite_.reset(new Sprite(L"Resources\\Images\\Ball.png",rect));
@@ -46,11 +47,12 @@ Bullet::~Bullet()
 //
 // Return : –³‚µ
 /////////////////////////////////////////////////////
-void Bullet::Initialize(Vector2 pos,Vector2 vel)
+void Bullet::Initialize(Vector2 pos,Vector2 vel,int power)
 {
 	sprite_->Pos(pos);
 	vel_ = vel;
 	vel_.Normalize();
+	power_ = power;
 }
 
 /////////////////////////////////////////////////////
@@ -79,4 +81,32 @@ void Bullet::Update()
 void Bullet::Render()
 {
 	sprite_->Render();
+}
+
+/////////////////////////////////////////////////////
+// Name : Scale
+//
+// Over View : ‘å‚«‚³‚Ì•ÏX
+//
+// Argument : ‘å‚«‚³
+//
+// Return : –³‚µ
+/////////////////////////////////////////////////////
+void Bullet::Scale(float scale)
+{
+	sprite_->Scale(scale);
+}
+
+/////////////////////////////////////////////////////
+// Name : Scale
+//
+// Over View : ‘å‚«‚³‚ÌŽæ“¾
+//
+// Argument : –³‚µ
+//
+// Return : ‘å‚«‚³
+/////////////////////////////////////////////////////
+float Bullet::Scale()
+{
+	return sprite_->Scale();
 }

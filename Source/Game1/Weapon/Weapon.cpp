@@ -15,7 +15,8 @@
 //
 // Argument : –³‚µ
 /////////////////////////////////////////////////////
-Weapon::Weapon()
+Weapon::Weapon(int power)
+	:level_(1),power_(power)
 {
 }
 
@@ -67,4 +68,35 @@ void Weapon::Update(Character& character)
 /////////////////////////////////////////////////////
 void Weapon::Render()
 {
+}
+
+/////////////////////////////////////////////////////
+// Name : LevelUp
+//
+// Over View : •ŠíƒŒƒxƒ‹‚Ìã¸
+//
+// Argument : –³‚µ
+//
+// Return : –³‚µ
+/////////////////////////////////////////////////////
+void Weapon::LevelUp()
+{
+	if (level_ < maxLevel_)
+	{
+		level_++;
+	}
+}
+
+/////////////////////////////////////////////////////
+// Name : Power
+//
+// Over View : UŒ‚—Í‚Ìæ“¾
+//
+// Argument : –³‚µ
+//
+// Return : UŒ‚—Í
+/////////////////////////////////////////////////////
+int Weapon::Power()
+{
+	return power_;
 }

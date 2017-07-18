@@ -31,12 +31,23 @@ protected:
 	//ˆÚ“®‘¬“x
 	float moveSpeed_;
 
+	//UŒ‚—Í
+	int power_;
+
 public:
 	Bullet();
 	virtual ~Bullet();
 
-	virtual void Initialize(Math::Vector2 pos,Math::Vector2 vel);
+	//‰Šú‰»ˆ—
+	virtual void Initialize(Math::Vector2 pos,Math::Vector2 vel,int power);
+	
+	//XVˆ—
 	virtual void Update();
+	
+	//•`‰æˆ—
 	virtual void Render();
-};
 
+	//‘å‚«‚³‚Ìæ“¾‚Æİ’è
+	void Scale(float scale);
+	float Scale();
+};

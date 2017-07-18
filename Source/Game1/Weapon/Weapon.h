@@ -17,9 +17,17 @@ class Character;
 class Weapon
 {
 protected:
+	//武器レベル
+	int level_;
+
+	//武器レベルの上限
+	 const int maxLevel_ = 3;
+
+	 //攻撃力
+	 int power_;
 
 	//コンストラクタ
-	Weapon();
+	Weapon(int power);
 public:
 
 	//デストラクタ
@@ -33,5 +41,10 @@ public:
 	
 	//描画処理
 	virtual void Render();
-};
 
+	//レベルが上がる
+	virtual void LevelUp();
+
+	//攻撃力の取得
+	int Power();
+};

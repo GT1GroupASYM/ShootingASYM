@@ -23,6 +23,15 @@ private:
 	//経過時間
 	float currentTime_;
 
+	//攻撃の向き
+	int dir_;
+
+	//球の大きさの上昇値
+	const float bulletIncreaseValue_ = 0.25f;
+
+	//レベルから攻撃力を算出
+	int CalcPower();
+
 public:
 	//コンストラクタ
 	Twins();

@@ -22,7 +22,8 @@ using namespace DirectX::SimpleMath;
 // Argument : –³‚µ
 /////////////////////////////////////////////////////
 MachineGun::MachineGun()
-	:waitTime_(0.1f), currentTime_(0.0f)
+	:Weapon(18),waitTime_(0.1f)
+	, currentTime_(0.0f)
 {
 }
 
@@ -78,7 +79,7 @@ void MachineGun::Update(Character& character)
 		//’e‚Ì¶¬
 		std::shared_ptr<Bullet> bullet;
 		bullet.reset(new Bullet);
-		bullet->Initialize(pos, vel);
+		bullet->Initialize(pos, vel,power_);
 		BulletManager::GetInstance()->Add(bullet);
 
 		//ƒ}ƒVƒ“ƒKƒ“‚Ì‘Ò‹@ŠÔ‚Ì‰Šú‰»
