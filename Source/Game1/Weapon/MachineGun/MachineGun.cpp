@@ -15,6 +15,33 @@
 using namespace DirectX::SimpleMath;
 
 /////////////////////////////////////////////////////
+// Name : CalcPower
+//
+// Over View : レベルから攻撃力を算出
+//
+// Argument : 無し
+//
+// Return : 攻撃力
+/////////////////////////////////////////////////////
+int MachineGun::CalcPower()
+{
+	auto power = 0;
+
+	//20 -> 25 -> 50
+	for (auto i = 0; i < 5; i++)
+	{
+		auto num = 100 % (5 - (level_ - 1) - i);
+		if (num == 0)
+		{
+			power = 100 / (5 - (level_ - 1) - i);
+			break;
+		}
+	}
+
+	return power;
+}
+
+/////////////////////////////////////////////////////
 // Name : MachineGun
 //
 // Over View : コンストラクタ
@@ -22,7 +49,7 @@ using namespace DirectX::SimpleMath;
 // Argument : 無し
 /////////////////////////////////////////////////////
 MachineGun::MachineGun()
-	:Weapon(18),waitTime_(0.1f)
+	:Weapon(20),waitTime_(0.1f)
 	, currentTime_(0.0f)
 {
 }
@@ -75,13 +102,18 @@ void MachineGun::Update(Character& character)
 		auto y = mouse->GetState().y;
 		auto pos = character.Pos();
 		auto vel = Vector2(x, y) - pos;
+		auto power = CalcPower();
 
-		//弾の生成
-		std::shared_ptr<Bullet> bullet;
-		bullet.reset(new Bullet);
-		bullet->Initialize(pos, vel,power_);
-		BulletManager::GetInstance()->Add(bullet);
+		for (auto i = 0; i < level_; i++)
+		{
+			//弾の生成
+			std::shared_ptr<Bullet> bullet;
+			bullet.reset(new Bullet);
+			bullet->Initialize(pos, vel, power_);
+			BulletManager::GetInstance()->Add(bullet);
 
+			if (i == 0) continue;
+		}
 		//マシンガンの待機時間の初期化
 		currentTime_ = 0.0f;
 	}

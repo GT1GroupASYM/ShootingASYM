@@ -24,7 +24,7 @@ Player::Player(wchar_t* texturePass,RECT rect)
 	:Character(texturePass,rect)
 {
 	state_.reset(new PlayerNormalState);
-	weapon_.reset(new Twins);
+	weapon_.reset(new MachineGun);
 }
 
 /////////////////////////////////////////////////////

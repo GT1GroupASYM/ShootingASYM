@@ -23,6 +23,9 @@ private:
 	//経過時間
 	float currentTime_;
 
+	//レベルから攻撃力を算出
+	int CalcPower();
+
 public:
 	//コンストラクタ
 	MachineGun();
