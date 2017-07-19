@@ -94,11 +94,30 @@ void InputManager::Window(HWND window)
 //
 // Argument : 判定したいキー
 //
-// Return : 無し
+// Return : 押されていたらtrue
 /////////////////////////////////////////////////////
 bool InputManager::KeyInput(DirectX::Keyboard::Keys key)
 {
 	if (key_->GetState().IsKeyDown(key))
+	{
+		return true;
+	}
+
+	return false;
+}
+
+/////////////////////////////////////////////////////
+// Name : KeyInputDown
+//
+// Over View : 指定したキーが押された瞬間を検出
+//
+// Argument : 判定したいキー
+//
+// Return : 押されていたらtrue
+/////////////////////////////////////////////////////
+bool InputManager::KeyInputDown(DirectX::Keyboard::Keys key)
+{
+	if (keyTracker_->IsKeyPressed(key))
 	{
 		return true;
 	}

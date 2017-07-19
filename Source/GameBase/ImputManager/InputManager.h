@@ -54,6 +54,9 @@ public:
 	//指定したキーが押されてるか
 	bool KeyInput(DirectX::Keyboard::Keys key);
 
+	//指定したキーが押された瞬間を検出
+	bool KeyInputDown(DirectX::Keyboard::Keys key);
+
 	//マウスの取得
 	DirectX::Mouse* Mouse();
 

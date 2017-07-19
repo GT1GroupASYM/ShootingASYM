@@ -32,6 +32,17 @@ int Twins::CalcPower()
 {
 	auto power = 0;
 
+	//20 -> 25 -> 50
+	for (auto i = 0; i < 5; i++)
+	{
+		auto num = 100 % (5 - (level_ - 1) - i);
+		if (num == 0)
+		{
+			power = 100 / (5 - (level_ - 1) - i);
+			break;
+		}
+	}
+
 	return power;
 }
 
@@ -43,7 +54,7 @@ int Twins::CalcPower()
 // Argument : –³‚µ
 /////////////////////////////////////////////////////
 Twins::Twins()
-	:Weapon(18),waitTime_(0.3f)
+	:Weapon(20),waitTime_(0.3f)
 	,currentTime_(0.0f),dir_(1)
 {
 }
@@ -89,6 +100,11 @@ void Twins::Update(Character & character)
 		return;
 	}
 
+	if (InputManager::GetInstance()->KeyInputDown(DirectX::Keyboard::R))
+		level_--;
+	if (InputManager::GetInstance()->KeyInputDown(DirectX::Keyboard::T))
+		LevelUp();
+
 	auto mouse = InputManager::GetInstance()->Mouse();
 	if (mouse->GetState().leftButton)
 	{
@@ -100,7 +116,8 @@ void Twins::Update(Character & character)
 		//’e‚Ì¶¬
 		std::shared_ptr<Bullet> bullet;
 		bullet.reset(new Bullet);
-		bullet->Initialize(pos, vel * dir_, power_);
+		auto power = CalcPower();
+		bullet->Initialize(pos, vel * dir_, power);
 		bullet->Scale(1 + (level_ - 1) * bulletIncreaseValue_);
 		BulletManager::GetInstance()->Add(bullet);
 
