@@ -7,7 +7,11 @@
 /////////////////////////////////////////////////////
 #pragma once
 
+#include <Mouse.h>
+
 #include "../Weapon.h"
+
+namespace Math = DirectX::SimpleMath;
 
 /////////////////////////////////////////////////////
 // Name : Twins
@@ -31,6 +35,9 @@ private:
 
 	//レベルから攻撃力を算出
 	int CalcPower();
+
+	//球を打つ
+	void BulletFire(DirectX::Mouse* mouse,Character& caracter);
 
 public:
 	//コンストラクタ

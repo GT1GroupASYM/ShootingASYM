@@ -7,7 +7,10 @@
 /////////////////////////////////////////////////////
 #pragma once
 
+#include <Mouse.h>
+
 #include "../Weapon.h"
+
 
 /////////////////////////////////////////////////////
 // Name : MachineGun
@@ -25,6 +28,12 @@ private:
 
 	//レベルから攻撃力を算出
 	int CalcPower();
+
+	//球を撃つ
+	void BulletFire(DirectX::Mouse* mouse, Character& character);
+	
+	//球を打つ
+	void Fire(Math::Vector2 pos,Math::Vector2 vel, int dir,int bulletCount);
 
 public:
 	//コンストラクタ

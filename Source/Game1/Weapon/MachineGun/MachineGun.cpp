@@ -12,7 +12,7 @@
 #include "../../Bullet/Bullet.h"
 #include "../../Character/Character.h"
 
-using namespace DirectX::SimpleMath;
+using namespace Math;
 
 /////////////////////////////////////////////////////
 // Name : CalcPower
@@ -39,6 +39,56 @@ int MachineGun::CalcPower()
 	}
 
 	return power;
+}
+
+/////////////////////////////////////////////////////
+// Name : BulletFire
+//
+// Over View : 球を撃つ
+//
+// Argument : マウス、キャラクターへの参照
+//
+// Return : 無し
+/////////////////////////////////////////////////////
+void MachineGun::BulletFire(DirectX::Mouse * mouse, Character & character)
+{
+	auto x = mouse->GetState().x;
+	auto y = mouse->GetState().y;
+	auto pos = character.Pos();
+	auto vel = Vector2(x, y) - pos;
+	auto power = CalcPower();
+
+	for (auto i = 0; i < level_; i++)
+	{
+		Fire(pos, vel, 1, i);
+
+		if (i == 0) continue;
+
+		Fire(pos, vel, -1, i);
+	}
+}
+
+/////////////////////////////////////////////////////
+// Name : Fire
+//
+// Over View : 球を撃つ(実際に呼び出すのはBulletFireの中)
+//
+// Argument : 座標、速度、広がる角度の向き、何発目か
+//
+// Return : 無し
+/////////////////////////////////////////////////////
+void MachineGun::Fire(Vector2 pos,Vector2 vel, int dir,int bulletCount)
+{
+	auto angle = atan2f(vel.y, vel.x);
+	angle += (bulletCount * 5) * 3.14f / 180 * dir;
+	Matrix rot = Matrix::CreateRotationZ(angle);
+	vel = Vector2::TransformNormal(Vector2(1.0f, 0.0f), rot);
+
+	//弾の生成
+	std::shared_ptr<Bullet> bullet;
+	bullet.reset(new Bullet);
+	bullet->Initialize(pos, vel, power_);
+	BulletManager::GetInstance()->Add(bullet);
 }
 
 /////////////////////////////////////////////////////
@@ -95,25 +145,17 @@ void MachineGun::Update(Character& character)
 		return;
 	}
 
+	if (InputManager::GetInstance()->KeyInputDown(DirectX::Keyboard::T))
+		LevelUp();
+	if (InputManager::GetInstance()->KeyInputDown(DirectX::Keyboard::R))
+		level_--;
+
 	auto mouse = InputManager::GetInstance()->Mouse();
 	if (mouse->GetState().leftButton)
 	{
-		auto x = mouse->GetState().x;
-		auto y = mouse->GetState().y;
-		auto pos = character.Pos();
-		auto vel = Vector2(x, y) - pos;
-		auto power = CalcPower();
+		//球を撃つ
+		BulletFire(mouse, character);
 
-		for (auto i = 0; i < level_; i++)
-		{
-			//弾の生成
-			std::shared_ptr<Bullet> bullet;
-			bullet.reset(new Bullet);
-			bullet->Initialize(pos, vel, power_);
-			BulletManager::GetInstance()->Add(bullet);
-
-			if (i == 0) continue;
-		}
 		//マシンガンの待機時間の初期化
 		currentTime_ = 0.0f;
 	}

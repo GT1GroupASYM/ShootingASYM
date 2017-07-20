@@ -47,6 +47,35 @@ int Twins::CalcPower()
 }
 
 /////////////////////////////////////////////////////
+// Name : BulletFire
+//
+// Over View : 球を撃つ
+//
+// Argument : マウス、キャラクターへの参照
+//
+// Return : 無し
+/////////////////////////////////////////////////////
+void Twins::BulletFire(DirectX::Mouse * mouse,Character& character)
+{
+	auto x = (float)mouse->GetState().x;
+	auto y = (float)mouse->GetState().y;
+	auto pos = character.Pos();
+	auto vel = Vector2(x, y) - pos;
+
+	//弾の生成
+	std::shared_ptr<Bullet> bullet;
+	bullet.reset(new Bullet);
+	auto power = CalcPower();
+	bullet->Initialize(pos, vel * dir_, power);
+	bullet->Scale(1 + (level_ - 1) * bulletIncreaseValue_);
+	BulletManager::GetInstance()->Add(bullet);
+
+	//攻撃の向きの変更
+	dir_ *= -1;
+}
+
+
+/////////////////////////////////////////////////////
 // Name : Twins
 //
 // Over View : コンストラクタ
@@ -100,29 +129,11 @@ void Twins::Update(Character & character)
 		return;
 	}
 
-	if (InputManager::GetInstance()->KeyInputDown(DirectX::Keyboard::R))
-		level_--;
-	if (InputManager::GetInstance()->KeyInputDown(DirectX::Keyboard::T))
-		LevelUp();
-
 	auto mouse = InputManager::GetInstance()->Mouse();
 	if (mouse->GetState().leftButton)
 	{
-		auto x = (float)mouse->GetState().x;
-		auto y = (float)mouse->GetState().y;
-		auto pos = character.Pos();
-		auto vel = Vector2(x, y) - pos;
-
-		//弾の生成
-		std::shared_ptr<Bullet> bullet;
-		bullet.reset(new Bullet);
-		auto power = CalcPower();
-		bullet->Initialize(pos, vel * dir_, power);
-		bullet->Scale(1 + (level_ - 1) * bulletIncreaseValue_);
-		BulletManager::GetInstance()->Add(bullet);
-
-		//攻撃の向きの変更
-		dir_ *= -1;
+		//球を撃つ
+		BulletFire(mouse,character);
 
 		//マシンガンの待機時間の初期化
 		currentTime_ = 0.0f;

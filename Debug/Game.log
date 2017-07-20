@@ -1,3 +1,4 @@
-﻿  Player.cpp
+﻿  MachineGun.cpp
+c:\users\s152227\documents\shootingasym\source\game1\weapon\machinegun\machinegun.cpp(123): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
   Game.vcxproj -> C:\Users\s152227\Documents\ShootingASYM\Debug\Game.exe
   Game.vcxproj -> C:\Users\s152227\Documents\ShootingASYM\Debug\Game.pdb (Full PDB)
