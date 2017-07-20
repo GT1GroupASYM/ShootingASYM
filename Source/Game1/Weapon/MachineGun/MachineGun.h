@@ -8,9 +8,12 @@
 #pragma once
 
 #include <Mouse.h>
+#include <d3d11.h>
+#include <SimpleMath.h>
 
 #include "../Weapon.h"
 
+namespace Math = DirectX::SimpleMath;
 
 /////////////////////////////////////////////////////
 // Name : MachineGun
