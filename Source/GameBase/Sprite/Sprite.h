@@ -10,37 +10,9 @@
 #include <d3d11.h>
 #include <SimpleMath.h>
 #include <memory>
+#include "../Collision/Collision.h"
 
 namespace Math = DirectX::SimpleMath;
-
-namespace Collider
-{
-	struct BoundingBox
-	{
-		float top_;
-		float bottom_;
-		float left_;
-		float right_;
-
-		BoundingBox(float top, float bottom, float left, float right)
-			:top_(top), bottom_(bottom), left_(left), right_(right)
-		{
-
-		}
-	};
-
-	struct Circle
-	{
-		Math::Vector2 center_;
-		float radius_;
-
-		Circle(Math::Vector2 center, float radius)
-			:center_(center), radius_(radius)
-		{
-
-		}
-	};
-}
 
 /////////////////////////////////////////////////////
 // Name : Sprite

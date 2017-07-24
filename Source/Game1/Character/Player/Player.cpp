@@ -12,7 +12,6 @@
 #include "../../Weapon/MachineGun/MachineGun.h"
 #include "../../Weapon/Twins/Twins.h"
 
-
 /////////////////////////////////////////////////////
 // Name : Player
 //

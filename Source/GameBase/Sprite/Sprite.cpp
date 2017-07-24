@@ -256,6 +256,11 @@ Collider::BoundingBox Sprite::BoundingBox()
 	auto left = pos_.x - origine_.x;
 	auto right = pos_.x + ((rect_.right - rect_.left) - origine_.x);
 
+	top *= scale_;
+	bottom *= scale_;
+	left *= scale_;
+	right *= scale_;
+
 	return Collider::BoundingBox(top, bottom, left, right);
 }
 
@@ -277,6 +282,9 @@ Collider::Circle Sprite::Circle()
 
 	//”¼Œa
 	auto radius = (rect_.right - rect_.left) / 2;
+
+	center *= scale_;
+	radius *= scale_;
 
 	return Collider::Circle(center, radius);
 }

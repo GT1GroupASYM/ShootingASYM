@@ -10,6 +10,7 @@
 #include <memory>
 #include <d3d11.h>
 #include <SimpleMath.h>
+#include "../../GameBase/Collision/Collision.h"
 
 class Sprite;
 
@@ -49,4 +50,7 @@ public:
 
 	//座標の取得
 	Math::Vector2 Pos();
+
+	//当たり判定用のボックスの取得
+	Collider::BoundingBox BoundingBox();
 };

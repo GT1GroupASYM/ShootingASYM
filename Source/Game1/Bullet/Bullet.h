@@ -10,6 +10,7 @@
 #include <memory>
 #include <d3d11.h>
 #include <SimpleMath.h>
+#include "../../GameBase/Collision/Collision.h"
 
 class Sprite;
 
@@ -50,4 +51,7 @@ public:
 	//大きさの取得と設定
 	void Scale(float scale);
 	float Scale();
+
+	//当たり判定用のボックスの取得
+	Collider::BoundingBox BoundingBox();
 };

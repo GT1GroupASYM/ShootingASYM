@@ -110,3 +110,17 @@ float Bullet::Scale()
 {
 	return sprite_->Scale();
 }
+
+/////////////////////////////////////////////////////
+// Name : BoundingBox
+//
+// Over View : 当たり判定用のボックスの取得
+//
+// Argument : 無し
+//
+// Return : 当たり判定用のボックス
+/////////////////////////////////////////////////////
+Collider::BoundingBox Bullet::BoundingBox()
+{
+	return sprite_->BoundingBox();;
+}
