@@ -1,6 +1,4 @@
-﻿  InputManager.cpp
-  MachineGun.cpp
-  Character.cpp
-  コードを生成中...
+﻿  Sprite.cpp
+c:\users\s152227\documents\shootingasym\source\gamebase\sprite\sprite.cpp(260): warning C4244: '引数': 'LONG' から 'float' への変換です。データが失われる可能性があります。
   Game.vcxproj -> C:\Users\s152227\Documents\ShootingASYM\Debug\Game.exe
   Game.vcxproj -> C:\Users\s152227\Documents\ShootingASYM\Debug\Game.pdb (Full PDB)

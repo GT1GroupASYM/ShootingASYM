@@ -13,6 +13,35 @@
 
 namespace Math = DirectX::SimpleMath;
 
+namespace Collider
+{
+	struct BoundingBox
+	{
+		float top_;
+		float bottom_;
+		float left_;
+		float right_;
+
+		BoundingBox(float top, float bottom, float left, float right)
+			:top_(top), bottom_(bottom), left_(left), right_(right)
+		{
+
+		}
+	};
+
+	struct Circle
+	{
+		Math::Vector2 center_;
+		float radius_;
+
+		Circle(Math::Vector2 center, float radius)
+			:center_(center), radius_(radius)
+		{
+
+		}
+	};
+}
+
 /////////////////////////////////////////////////////
 // Name : Sprite
 //
@@ -79,5 +108,10 @@ public:
 	void Color(Math::Color color);
 	Math::Color Color();
 
+	//当たり判定用のボックスの取得
+	Collider::BoundingBox BoundingBox();
+
+	//当たり判定用の円の取得
+	Collider::Circle Circle();
 };
 

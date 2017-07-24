@@ -67,6 +67,8 @@ void Sprite::Render()
 	auto spriteBatch = SpriteManager::GetInstance()->SpriteBatch();
 
 	spriteBatch->Draw(texture_, pos_, &rect_, color_, rot_, origine_,scale_);
+
+	Circle();
 }
 
 /////////////////////////////////////////////////////
@@ -235,4 +237,46 @@ void Sprite::Color(Math::Color color)
 Math::Color Sprite::Color()
 {
 	return color_;
+}
+
+/////////////////////////////////////////////////////
+// Name : BoundingBox
+//
+// Over View : 当たり判定用のボックスの取得
+//
+// Argument : 無し
+//
+// Return : 当たり判定用のボックス
+/////////////////////////////////////////////////////
+Collider::BoundingBox Sprite::BoundingBox()
+{
+	//中心点から各頂点の計算
+	auto top = pos_.y - origine_.y;
+	auto bottom = pos_.y + ((rect_.bottom - rect_.top) - origine_.y);
+	auto left = pos_.x - origine_.x;
+	auto right = pos_.x + ((rect_.right - rect_.left) - origine_.x);
+
+	return Collider::BoundingBox(top, bottom, left, right);
+}
+
+/////////////////////////////////////////////////////
+// Name : Circle
+//
+// Over View : 当たり判定用の円の取得
+//
+// Argument : 無し
+//
+// Return : 当たり判定用の円
+/////////////////////////////////////////////////////
+Collider::Circle Sprite::Circle()
+{
+	//中心点から画像の中心の計算
+	Vector2 center;
+	center.x = pos_.x + (rect_.right - rect_.left) / 2 - origine_.x;
+	center.y = pos_.y + (rect_.bottom - rect_.top) / 2 - origine_.y;
+
+	//半径
+	auto radius = (rect_.right - rect_.left) / 2;
+
+	return Collider::Circle(center, radius);
 }
