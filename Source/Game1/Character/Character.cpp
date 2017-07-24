@@ -22,7 +22,7 @@ Character::Character(wchar_t* texturePass,RECT rect)
 	:vel_(Vector2::Zero), moveSpeed_(3.0f)
 {
 	sprite_.reset(new Sprite(texturePass,rect));
-	sprite_->Origine(Vector2(rect.bottom / 2, rect.right / 2));
+	sprite_->Origine(Vector2(rect.bottom / 2.0f, rect.right / 2.0f));
 }
 
 /////////////////////////////////////////////////////

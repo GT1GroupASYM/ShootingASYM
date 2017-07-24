@@ -55,7 +55,7 @@ void MachineGun::BulletFire(DirectX::Mouse * mouse, Character & character)
 	auto x = mouse->GetState().x;
 	auto y = mouse->GetState().y;
 	auto pos = character.Pos();
-	auto vel = Vector2(x, y) - pos;
+	auto vel = Vector2((float)x, (float)y) - pos;
 	auto power = CalcPower();
 
 	for (auto i = 0; i < level_; i++)

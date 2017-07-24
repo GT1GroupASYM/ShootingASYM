@@ -164,7 +164,7 @@ DirectX::Mouse::ButtonStateTracker* InputManager::MouseTacker()
 /////////////////////////////////////////////////////
 Math::Vector2 InputManager::MousePos()
 {
-	auto pos = Vector2(mouse_->GetState().x, mouse_->GetState().y);
+	auto pos = Vector2((float)mouse_->GetState().x, (float)mouse_->GetState().y);
 
 	return pos;
 }
