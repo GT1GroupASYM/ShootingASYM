@@ -7,8 +7,8 @@
 /////////////////////////////////////////////////////
 #include "../../pch.h"
 #include "Game1.h"
-#include "Scene\SceneState\SceneState.h"
-#include "Scene\PlayState\PlayState.h"
+#include "Scene\Scene\Scene.h"
+#include "Scene\PlayScene\PlayScene.h"
 #include "../GameBase/Sprite/SpriteManager/SpriteManager.h"
 #include "../GameBase/ImputManager/InputManager.h"
 
@@ -21,7 +21,7 @@
 /////////////////////////////////////////////////////
 Game1::Game1()
 {
-	scene_.reset(new PlayState);
+	scene_.reset(new PlayScene);
 }
 
 /////////////////////////////////////////////////////

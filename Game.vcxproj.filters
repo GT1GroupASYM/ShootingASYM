@@ -35,12 +35,6 @@
     <Filter Include="Source\Game1\Scene">
       <UniqueIdentifier>{36dfbe2f-54e7-4cff-87ef-57dca422c144}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Game1\Scene\SceneState">
-      <UniqueIdentifier>{c9b20159-11c6-476c-9651-3fc142b38c15}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Game1\Scene\PlayState">
-      <UniqueIdentifier>{7d55e77b-e5c4-4e54-aedd-8d7a6faf7bc2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Game1\Character">
       <UniqueIdentifier>{9609cd98-6e0d-4b92-9b57-755cd9df523f}</UniqueIdentifier>
     </Filter>
@@ -71,6 +65,12 @@
     <Filter Include="Source\Game1\Weapon\Twins">
       <UniqueIdentifier>{29d2cce1-d99a-4057-838b-417415401764}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Game1\Scene\PlayScene">
+      <UniqueIdentifier>{7d55e77b-e5c4-4e54-aedd-8d7a6faf7bc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Scene\Scene">
+      <UniqueIdentifier>{c9b20159-11c6-476c-9651-3fc142b38c15}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -98,12 +98,6 @@
     </ClInclude>
     <ClInclude Include="Source\GameBase\ImputManager\InputManager.h">
       <Filter>Source\ImputManager</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Game1\Scene\PlayState\PlayState.h">
-      <Filter>Source\Game1\Scene\PlayState</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Game1\Scene\SceneState\SceneState.h">
-      <Filter>Source\Game1\Scene\SceneState</Filter>
     </ClInclude>
     <ClInclude Include="Source\Game1\Character\Player\Player.h">
       <Filter>Source\Game1\Character\Player</Filter>
@@ -135,6 +129,12 @@
     <ClInclude Include="Source\Game1\Weapon\Twins\Twins.h">
       <Filter>Source\Game1\Weapon\Twins</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Game1\Scene\PlayScene\PlayScene.h">
+      <Filter>Source\Game1\Scene\PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Scene\Scene\Scene.h">
+      <Filter>Source\Game1\Scene\Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -157,12 +157,6 @@
     </ClCompile>
     <ClCompile Include="Source\GameBase\ImputManager\InputManager.cpp">
       <Filter>Source\ImputManager</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Game1\Scene\PlayState\PlayState.cpp">
-      <Filter>Source\Game1\Scene\PlayState</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Game1\Scene\SceneState\SceneState.cpp">
-      <Filter>Source\Game1\Scene\SceneState</Filter>
     </ClCompile>
     <ClCompile Include="Source\Game1\Character\Player\Player.cpp">
       <Filter>Source\Game1\Character\Player</Filter>
@@ -193,6 +187,12 @@
     </ClCompile>
     <ClCompile Include="Source\Game1\Weapon\Twins\Twins.cpp">
       <Filter>Source\Game1\Weapon\Twins</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Scene\PlayScene\PlayScene.cpp">
+      <Filter>Source\Game1\Scene\PlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Scene\Scene\Scene.cpp">
+      <Filter>Source\Game1\Scene\Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

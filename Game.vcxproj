@@ -162,8 +162,8 @@
     <ClInclude Include="Source\Game1\Character\Player\PlayerState\PlayerNormalState\PlayerNormalState.h" />
     <ClInclude Include="Source\Game1\Character\Player\PlayerState\PlayerState.h" />
     <ClInclude Include="Source\Game1\Game1.h" />
-    <ClInclude Include="Source\Game1\Scene\PlayState\PlayState.h" />
-    <ClInclude Include="Source\Game1\Scene\SceneState\SceneState.h" />
+    <ClInclude Include="Source\Game1\Scene\PlayScene\PlayScene.h" />
+    <ClInclude Include="Source\Game1\Scene\Scene\Scene.h" />
     <ClInclude Include="Source\Game1\Weapon\MachineGun\MachineGun.h" />
     <ClInclude Include="Source\Game1\Weapon\Twins\Twins.h" />
     <ClInclude Include="Source\Game1\Weapon\Weapon.h" />
@@ -192,8 +192,8 @@
     <ClCompile Include="Source\Game1\Character\Player\PlayerState\PlayerNormalState\PlayerNormalState.cpp" />
     <ClCompile Include="Source\Game1\Character\Player\PlayerState\PlayerState.cpp" />
     <ClCompile Include="Source\Game1\Game1.cpp" />
-    <ClCompile Include="Source\Game1\Scene\PlayState\PlayState.cpp" />
-    <ClCompile Include="Source\Game1\Scene\SceneState\SceneState.cpp" />
+    <ClCompile Include="Source\Game1\Scene\PlayScene\PlayScene.cpp" />
+    <ClCompile Include="Source\Game1\Scene\Scene\Scene.cpp" />
     <ClCompile Include="Source\Game1\Weapon\MachineGun\MachineGun.cpp" />
     <ClCompile Include="Source\Game1\Weapon\Twins\Twins.cpp" />
     <ClCompile Include="Source\Game1\Weapon\Weapon.cpp" />
