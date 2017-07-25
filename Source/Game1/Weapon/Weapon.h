@@ -3,7 +3,7 @@
 //
 // Author : 山田 聖弥
 //
-// Day : 2017/7/14
+// Day : 2017/7/25
 /////////////////////////////////////////////////////
 #pragma once
 
@@ -17,11 +17,19 @@ class Character;
 class Weapon
 {
 protected:
+
 	//武器レベル
 	int level_;
 
 	//武器レベルの上限
-	 const int maxLevel_ = 3;
+	 static const int maxLevel_ = 3;
+
+	 //攻撃力のテーブル
+	 int powerTable_[maxLevel_] =
+	 {
+		 20,25,50
+	 };
+
 
 	 //攻撃力
 	 int power_;

@@ -3,7 +3,7 @@
 //
 // Author : 山田 聖弥
 //
-// Day : 2017/7/14
+// Day : 2017/7/25
 /////////////////////////////////////////////////////
 #pragma once
 
@@ -28,9 +28,6 @@ private:
 
 	//経過時間
 	float currentTime_;
-
-	//レベルから攻撃力を算出
-	int CalcPower();
 
 	//球を撃つ
 	void BulletFire(DirectX::Mouse* mouse, Character& character);

@@ -3,7 +3,7 @@
 //
 // Author : ŽR“c ¹–í
 //
-// Day : 2017/7/16
+// Day : 2017/7/25
 /////////////////////////////////////////////////////
 #pragma once
 
@@ -18,33 +18,6 @@
 #include "../../Character/Character.h"
 
 using namespace DirectX::SimpleMath;
-
-/////////////////////////////////////////////////////
-// Name : CalcPower
-//
-// Over View : ƒŒƒxƒ‹‚©‚çUŒ‚—Í‚ðŽZo
-//
-// Argument : –³‚µ
-//
-// Return : UŒ‚—Í
-/////////////////////////////////////////////////////
-int Twins::CalcPower()
-{
-	auto power = 0;
-
-	//20 -> 25 -> 50
-	for (auto i = 0; i < 5; i++)
-	{
-		auto num = 100 % (5 - (level_ - 1) - i);
-		if (num == 0)
-		{
-			power = 100 / (5 - (level_ - 1) - i);
-			break;
-		}
-	}
-
-	return power;
-}
 
 /////////////////////////////////////////////////////
 // Name : BulletFire
@@ -65,7 +38,7 @@ void Twins::BulletFire(DirectX::Mouse * mouse,Character& character)
 	//’e‚Ì¶¬
 	std::shared_ptr<Bullet> bullet;
 	bullet.reset(new Bullet);
-	auto power = CalcPower();
+	auto power = powerTable_[level_];
 	bullet->Initialize(pos, vel * dir_, power);
 	bullet->Scale(1 + (level_ - 1) * bulletIncreaseValue_);
 	BulletManager::GetInstance()->Add(bullet);

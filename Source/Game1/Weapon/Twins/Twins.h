@@ -3,7 +3,7 @@
 //
 // Author : 山田 聖弥
 //
-// Day : 2017/7/16
+// Day : 2017/7/25
 /////////////////////////////////////////////////////
 #pragma once
 
@@ -32,9 +32,6 @@ private:
 
 	//球の大きさの上昇値
 	const float bulletIncreaseValue_ = 0.25f;
-
-	//レベルから攻撃力を算出
-	int CalcPower();
 
 	//球を打つ
 	void BulletFire(DirectX::Mouse* mouse,Character& caracter);

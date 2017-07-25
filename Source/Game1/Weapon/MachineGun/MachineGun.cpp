@@ -3,7 +3,7 @@
 //
 // Author : ŽR“c ¹–í
 //
-// Day : 2017/7/14
+// Day : 2017/7/25
 /////////////////////////////////////////////////////
 #include "../../../../pch.h"
 #include "MachineGun.h"
@@ -13,33 +13,6 @@
 #include "../../Character/Character.h"
 
 using namespace Math;
-
-/////////////////////////////////////////////////////
-// Name : CalcPower
-//
-// Over View : ƒŒƒxƒ‹‚©‚çUŒ‚—Í‚ðŽZo
-//
-// Argument : –³‚µ
-//
-// Return : UŒ‚—Í
-/////////////////////////////////////////////////////
-int MachineGun::CalcPower()
-{
-	auto power = 0;
-
-	//20 -> 25 -> 50
-	for (auto i = 0; i < 5; i++)
-	{
-		auto num = 100 % (5 - (level_ - 1) - i);
-		if (num == 0)
-		{
-			power = 100 / (5 - (level_ - 1) - i);
-			break;
-		}
-	}
-
-	return power;
-}
 
 /////////////////////////////////////////////////////
 // Name : BulletFire
@@ -56,7 +29,7 @@ void MachineGun::BulletFire(DirectX::Mouse * mouse, Character & character)
 	auto y = mouse->GetState().y;
 	auto pos = character.Pos();
 	auto vel = Vector2((float)x, (float)y) - pos;
-	auto power = CalcPower();
+	auto power = powerTable_[level_];
 
 	for (auto i = 0; i < level_; i++)
 	{

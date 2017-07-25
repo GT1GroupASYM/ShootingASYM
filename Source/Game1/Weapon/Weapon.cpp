@@ -16,7 +16,7 @@
 // Argument : –³‚µ
 /////////////////////////////////////////////////////
 Weapon::Weapon(int power)
-	:level_(1),power_(power)
+	:level_(0),power_(power)
 {
 }
 
