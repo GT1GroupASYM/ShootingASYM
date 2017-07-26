@@ -80,6 +80,15 @@
     <Filter Include="Source\Game1\Weapon\MachineGun">
       <UniqueIdentifier>{f852e343-a7c3-4be0-8179-ef7aa1971541}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\GameBase\Utility\UtilityFunction">
+      <UniqueIdentifier>{b1ad1338-1b46-4f57-b9bf-8694479dd207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Bullet\PlayerBullet">
+      <UniqueIdentifier>{a7fcca53-b807-4c38-a516-e434179ac8ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Bullet\EnemyBullet">
+      <UniqueIdentifier>{7cb998f9-20f8-4c2a-ae80-ab279508eedf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -147,7 +156,18 @@
     <ClInclude Include="Source\GameBase\Collision\Collision.h">
       <Filter>Source\GameBase\Collision</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Game1\CollisionManager\CollisionManager.h" />
+    <ClInclude Include="Source\GameBase\Utility\UtilityFunction\UtilityFunction.h">
+      <Filter>Source\GameBase\Utility\UtilityFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Bullet\PlayerBullet\PlayerBullet.h">
+      <Filter>Source\Game1\Bullet\PlayerBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\CollisionManager\CollisionManager.h">
+      <Filter>Source\Game1\CollisionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Bullet\EnemyBullet\EnemyBullet.h">
+      <Filter>Source\Game1\Bullet\EnemyBullet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -210,7 +230,15 @@
     <ClCompile Include="Source\GameBase\Collision\Collision.cpp">
       <Filter>Source\GameBase\Collision</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Game1\CollisionManager\CollisionManager.cpp" />
+    <ClCompile Include="Source\Game1\CollisionManager\CollisionManager.cpp">
+      <Filter>Source\Game1\CollisionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Bullet\PlayerBullet\PlayerBullet.cpp">
+      <Filter>Source\Game1\Bullet\PlayerBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Bullet\EnemyBullet\EnemyBullet.cpp">
+      <Filter>Source\Game1\Bullet\EnemyBullet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />

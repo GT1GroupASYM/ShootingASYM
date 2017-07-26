@@ -156,6 +156,8 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Source\Game1\BulletManager\BulletManager.h" />
     <ClInclude Include="Source\Game1\Bullet\Bullet.h" />
+    <ClInclude Include="Source\Game1\Bullet\EnemyBullet\EnemyBullet.h" />
+    <ClInclude Include="Source\Game1\Bullet\PlayerBullet\PlayerBullet.h" />
     <ClInclude Include="Source\Game1\Character\Character.h" />
     <ClInclude Include="Source\Game1\Character\Player\Player.h" />
     <ClInclude Include="Source\Game1\Character\Player\PlayerState\PlayerInvicibleState\PlayerInvicibleState.h" />
@@ -174,6 +176,7 @@
     <ClInclude Include="Source\GameBase\Sprite\Sprite.h" />
     <ClInclude Include="Source\GameBase\Sprite\SpriteManager\SpriteManager.h" />
     <ClInclude Include="Source\GameBase\Utility\Singleton\Singleton.h" />
+    <ClInclude Include="Source\GameBase\Utility\UtilityFunction\UtilityFunction.h" />
     <ClInclude Include="StepTimer.h" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +191,8 @@
     </ClCompile>
     <ClCompile Include="Source\Game1\BulletManager\BulletManager.cpp" />
     <ClCompile Include="Source\Game1\Bullet\Bullet.cpp" />
+    <ClCompile Include="Source\Game1\Bullet\EnemyBullet\EnemyBullet.cpp" />
+    <ClCompile Include="Source\Game1\Bullet\PlayerBullet\PlayerBullet.cpp" />
     <ClCompile Include="Source\Game1\Character\Character.cpp" />
     <ClCompile Include="Source\Game1\Character\Player\Player.cpp" />
     <ClCompile Include="Source\Game1\Character\Player\PlayerState\PlayerInvicibleState\PlayerInvicibleState.cpp" />

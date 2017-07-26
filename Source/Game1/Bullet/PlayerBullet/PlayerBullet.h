@@ -1,0 +1,26 @@
+/////////////////////////////////////////////////////
+// Name : PlayerBullet
+//
+// Author : 山田 聖弥
+//
+// Day : 2017/7/26
+/////////////////////////////////////////////////////
+#pragma once
+
+#include "../Bullet.h"
+
+/////////////////////////////////////////////////////
+// Name : PlayerBullet
+//
+// Over View : CollisionManagerにプレイヤーの球として登録するためのクラス
+/////////////////////////////////////////////////////
+class PlayerBullet:public Bullet
+{
+private:
+
+public:
+	PlayerBullet();
+	virtual ~PlayerBullet();
+
+	virtual bool Update() override;
+};

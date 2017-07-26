@@ -11,6 +11,7 @@
 #include "Scene\PlayScene\PlayScene.h"
 #include "../GameBase/Sprite/SpriteManager/SpriteManager.h"
 #include "../GameBase/ImputManager/InputManager.h"
+#include "CollisionManager\CollisionManager.h"
 
 /////////////////////////////////////////////////////
 // Name : Game1
@@ -74,6 +75,8 @@ void Game1::Update()
 
 	//シーンの更新
 	scene_->Update();
+
+	CollisionManager::GetInstance()->Update();
 }
 
 /////////////////////////////////////////////////////

@@ -56,9 +56,18 @@ void BulletManager::Initialize()
 /////////////////////////////////////////////////////
 void BulletManager::Update()
 {
-	for each(auto it in bulletList_)
+	auto it = bulletList_.begin();
+	while (it != bulletList_.end())
 	{
-		it->Update();
+		//更新処理が止まっていたらリストから削除
+		if (!(*it)->Update())
+		{
+			it = bulletList_.erase(it);
+		}
+		else
+		{
+			it++;
+		}
 	}
 }
 

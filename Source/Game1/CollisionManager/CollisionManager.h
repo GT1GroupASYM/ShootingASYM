@@ -12,7 +12,9 @@
 
 class Player;
 class Enemy;
-class Bullet;
+class PlayerBullet;
+class EnemyBullet;
+class Item;
 
 /////////////////////////////////////////////////////
 // Name : CollisionManager
@@ -22,7 +24,11 @@ class Bullet;
 class CollisionManager:public Singleton<CollisionManager>
 {
 private:
-
+	std::vector<Player*> playerList_;
+	std::vector<Enemy*> enemyList_;
+	std::vector<PlayerBullet*> playerBulletList_;
+	std::vector<EnemyBullet*> enemyBulletList_;
+	std::vector<Item*> itemList_;
 
 	friend Singleton<CollisionManager>;
 
@@ -35,5 +41,14 @@ public:
 
 	//XVˆ—
 	void Update();
-};
 
+	//“o˜^‚ğƒŠƒZƒbƒg‚·‚é
+	void Clear();
+
+	//“–‚½‚è”»’è‚É“o˜^
+	void Entry(Player* player);
+	void Entry(Enemy* enemy);
+	void Entry(Item* item);
+	void Entry(PlayerBullet* bullet);
+	void Entry(EnemyBullet* bullet);
+};

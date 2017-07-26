@@ -20,11 +20,11 @@ using namespace Math;
 /////////////////////////////////////////////////////
 Bullet::Bullet()
 	:vel_(Vector2::Zero), moveSpeed_(15.0f)
-	,power_(0)
+	,power_(0),hit_(false)
 {
 	RECT rect{ 0,0,32,32 };
 	sprite_.reset(new Sprite(L"Resources\\Images\\Ball.png",rect));
-	sprite_->Origine(Vector2(rect.bottom / 2, rect.right / 2));
+	sprite_->Origine(Vector2(rect.bottom / 2.0f, rect.right / 2.0f));
 }
 
 /////////////////////////////////////////////////////
@@ -64,9 +64,15 @@ void Bullet::Initialize(Vector2 pos,Vector2 vel,int power)
 //
 // Return : –³‚µ
 /////////////////////////////////////////////////////
-void Bullet::Update()
+bool Bullet::Update()
 {
+	//‰½‚©‚É‚ ‚½‚Á‚Ä‚¢‚½‚çfalse
+	if (hit_)
+		return false;
+
 	sprite_->Pos(sprite_->Pos() + vel_ * moveSpeed_);
+
+	return true;
 }
 
 /////////////////////////////////////////////////////
@@ -123,4 +129,32 @@ float Bullet::Scale()
 Collider::BoundingBox Bullet::BoundingBox()
 {
 	return sprite_->BoundingBox();;
+}
+
+/////////////////////////////////////////////////////
+// Name : Power
+//
+// Over View : UŒ‚—Í‚Ìæ“¾
+//
+// Argument : –³‚µ
+//
+// Return : UŒ‚—Í
+/////////////////////////////////////////////////////
+int Bullet::Power()
+{
+	return power_;
+}
+
+/////////////////////////////////////////////////////
+// Name : Hit
+//
+// Over View : ‰½‚©‚É‚ ‚½‚Á‚½‚Ìˆ—
+//
+// Argument : –³‚µ
+//
+// Return : –³‚µ
+/////////////////////////////////////////////////////
+void Bullet::Hit()
+{
+	hit_ = true;
 }

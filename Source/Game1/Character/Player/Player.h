@@ -12,6 +12,7 @@
 class PlayerState;
 class Weapon;
 class PlayerNormalState;
+class Bullet;
 
 /////////////////////////////////////////////////////
 // Name : Player
@@ -41,5 +42,8 @@ public:
 
 	//•`‰æˆ—
 	void Render() override;
+
+	//“–‚½‚Á‚½‚Ìˆ—
+	void Hit(Bullet* bullet);
 };
 

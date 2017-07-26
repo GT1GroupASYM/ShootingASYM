@@ -35,6 +35,9 @@ protected:
 	//攻撃力
 	int power_;
 
+	//何かにあたったかのフラグ
+	bool hit_;
+
 public:
 	Bullet();
 	virtual ~Bullet();
@@ -43,7 +46,7 @@ public:
 	virtual void Initialize(Math::Vector2 pos,Math::Vector2 vel,int power);
 	
 	//更新処理
-	virtual void Update();
+	virtual bool Update();
 	
 	//描画処理
 	virtual void Render();
@@ -54,4 +57,10 @@ public:
 
 	//当たり判定用のボックスの取得
 	Collider::BoundingBox BoundingBox();
+
+	//攻撃力の取得
+	int Power();
+
+	//当たった時の処理
+	void Hit();
 };

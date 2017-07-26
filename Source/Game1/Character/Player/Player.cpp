@@ -11,6 +11,9 @@
 #include "PlayerState\PlayerNormalState\PlayerNormalState.h"
 #include "../../Weapon/MachineGun/MachineGun.h"
 #include "../../Weapon/Twins/Twins.h"
+#include "../../CollisionManager/CollisionManager.h"
+#include "../../Bullet/Bullet.h"
+#include "../../../GameBase/Utility/UtilityFunction/UtilityFunction.h"
 
 /////////////////////////////////////////////////////
 // Name : Player
@@ -70,6 +73,8 @@ void Player::Update()
 	state_->Update(*this);
 
 	Character::Update();
+
+	CollisionManager::GetInstance()->Entry(this);
 }
 
 /////////////////////////////////////////////////////
@@ -84,4 +89,22 @@ void Player::Update()
 void Player::Render()
 {
 	Character::Render();
+}
+
+/////////////////////////////////////////////////////
+// Name : Hit
+//
+// Over View : “–‚½‚Á‚½Žž‚Ìˆ—
+//
+// Argument : Bullet‚Ìƒ|ƒCƒ“ƒ^
+//
+// Return : –³‚µ
+/////////////////////////////////////////////////////
+void Player::Hit(Bullet * bullet)
+{
+	auto power = bullet->Power();
+
+	hp_ -= power;
+
+	hp_ = Clamp(hp_, 0, maxHp_);
 }

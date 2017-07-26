@@ -32,6 +32,12 @@ protected:
 	//移動速度
 	float moveSpeed_;
 
+	//最大HP
+	int maxHp_;
+
+	//ライフ
+	int hp_;
+
 public:
 	//コンストラクタ
 	Character(wchar_t* texturePass,RECT rect);

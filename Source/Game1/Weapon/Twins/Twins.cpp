@@ -14,6 +14,7 @@
 #include "Twins.h"
 #include "../../../GameBase/ImputManager/InputManager.h"
 #include "../../Bullet/Bullet.h"
+#include "../../Bullet/PlayerBullet/PlayerBullet.h"
 #include "../../BulletManager/BulletManager.h"
 #include "../../Character/Character.h"
 
@@ -37,7 +38,7 @@ void Twins::BulletFire(DirectX::Mouse * mouse,Character& character)
 
 	//íeÇÃê∂ê¨
 	std::shared_ptr<Bullet> bullet;
-	bullet.reset(new Bullet);
+	bullet.reset(new PlayerBullet);
 	auto power = powerTable_[level_];
 	bullet->Initialize(pos, vel * dir_, power);
 	bullet->Scale(1 + (level_ - 1) * bulletIncreaseValue_);

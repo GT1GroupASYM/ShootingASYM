@@ -10,6 +10,7 @@
 #include "../../../GameBase/ImputManager/InputManager.h"
 #include "../../BulletManager/BulletManager.h"
 #include "../../Bullet/Bullet.h"
+#include "../../Bullet/PlayerBullet/PlayerBullet.h"
 #include "../../Character/Character.h"
 
 using namespace Math;
@@ -31,7 +32,7 @@ void MachineGun::BulletFire(DirectX::Mouse * mouse, Character & character)
 	auto vel = Vector2((float)x, (float)y) - pos;
 	auto power = powerTable_[level_];
 
-	for (auto i = 0; i < level_; i++)
+	for (auto i = 0; i < level_ + 1; i++)
 	{
 		Fire(pos, vel, 1, i);
 
@@ -59,7 +60,7 @@ void MachineGun::Fire(Vector2 pos,Vector2 vel, int dir,int bulletCount)
 
 	//’e‚Ì¶¬
 	std::shared_ptr<Bullet> bullet;
-	bullet.reset(new Bullet);
+	bullet.reset(new PlayerBullet);
 	bullet->Initialize(pos, vel, power_);
 	BulletManager::GetInstance()->Add(bullet);
 }
