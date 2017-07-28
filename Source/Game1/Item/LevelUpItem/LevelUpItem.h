@@ -1,0 +1,35 @@
+/////////////////////////////////////////////////////
+// Name : LevelUpItem
+//
+// Author : 山田 聖弥
+//
+// Day : 2017/7/28
+/////////////////////////////////////////////////////
+#pragma once
+
+#include "../Item.h"
+
+/////////////////////////////////////////////////////
+// Name : LevelUpItem
+//
+// Over View : 武器レベルを上げるアイテム
+/////////////////////////////////////////////////////
+class LevelUpItem :public Item
+{
+private:
+
+public:
+	
+	//コンストラクタ
+	LevelUpItem();
+
+	//デストラクタ
+	~LevelUpItem();
+
+	//更新処理
+	bool Update() override;
+
+	//アイテムの使用
+	void Used(Player& player) override;
+};
+

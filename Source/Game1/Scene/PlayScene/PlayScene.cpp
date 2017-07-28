@@ -9,6 +9,8 @@
 #include "PlayScene.h"
 #include "../../Character/Player/Player.h"
 #include "../../BulletManager/BulletManager.h"
+#include "../../Item/LevelUpItem/LevelUpItem.h"
+#include "../../ItemManager/ItemManager.h"
 
 /////////////////////////////////////////////////////
 // Name : PlayScene
@@ -48,7 +50,13 @@ void PlayScene::Initialize()
 {
 	player_->Initialize();
 
+	ItemManager::GetInstance()->Initialize();
 	BulletManager::GetInstance()->Initialize();
+
+	std::shared_ptr<Item> item;
+	item.reset(new LevelUpItem);
+	item->Pos(Math::Vector2(100, 100));
+	ItemManager::GetInstance()->Add(item);
 }
 
 /////////////////////////////////////////////////////
@@ -80,6 +88,8 @@ void PlayScene::Update()
 {
 	player_->Update();
 
+
+	ItemManager::GetInstance()->Update();
 	BulletManager::GetInstance()->Update();
 }
 
@@ -96,5 +106,6 @@ void PlayScene::Render()
 {
 	player_->Render();
 
+	ItemManager::GetInstance()->Render();
 	BulletManager::GetInstance()->Render();
 }

@@ -11,7 +11,7 @@
 #include "../Bullet/Bullet.h"
 #include "../Bullet/PlayerBullet/PlayerBullet.h"
 #include "../Bullet/EnemyBullet/EnemyBullet.h"
-
+#include "../Item/Item.h"
 
 /////////////////////////////////////////////////////
 // Name : CollisionManager
@@ -76,14 +76,20 @@ void CollisionManager::Update()
 	{
 		for each(auto item in itemList_)
 		{
+			auto box1 = player->BoundingBox();
+			auto box2 = item->BoundingBox();
 
+			if (collision.Box2Box(box1, box2))
+			{
+				player->Hit(item);
+				item->Hit();
+			}
 		}
 	}
 	for each(auto enemy in enemyList_)
 	{
 		for each(auto bullet in playerBulletList_)
 		{
-
 		}
 	}
 

@@ -13,6 +13,7 @@ class PlayerState;
 class Weapon;
 class PlayerNormalState;
 class Bullet;
+class Item;
 
 /////////////////////////////////////////////////////
 // Name : Player
@@ -45,5 +46,9 @@ public:
 
 	//“–‚½‚Á‚½‚Ìˆ—
 	void Hit(Bullet* bullet);
+	void Hit(Item* item);
+
+	//•ŠíƒŒƒxƒ‹‚Ìã¸
+	void LevelUp();
 };
 

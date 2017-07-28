@@ -89,6 +89,15 @@
     <Filter Include="Source\Game1\Bullet\EnemyBullet">
       <UniqueIdentifier>{7cb998f9-20f8-4c2a-ae80-ab279508eedf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Game1\Item">
+      <UniqueIdentifier>{9c210b3d-d4ac-476f-851b-5cdbc47f9256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Item\LevelUpItem">
+      <UniqueIdentifier>{a7988170-2e78-4f4c-804c-c91484db46a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\ItemManager">
+      <UniqueIdentifier>{cb604ed3-18a5-4c9a-8067-76e656443e72}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -168,6 +177,15 @@
     <ClInclude Include="Source\Game1\Bullet\EnemyBullet\EnemyBullet.h">
       <Filter>Source\Game1\Bullet\EnemyBullet</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Game1\Item\Item.h">
+      <Filter>Source\Game1\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\ItemManager\ItemManager.h">
+      <Filter>Source\Game1\ItemManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Item\LevelUpItem\LevelUpItem.h">
+      <Filter>Source\Game1\Item\LevelUpItem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -238,6 +256,15 @@
     </ClCompile>
     <ClCompile Include="Source\Game1\Bullet\EnemyBullet\EnemyBullet.cpp">
       <Filter>Source\Game1\Bullet\EnemyBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\ItemManager\ItemManager.cpp">
+      <Filter>Source\Game1\ItemManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Item\Item.cpp">
+      <Filter>Source\Game1\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Item\LevelUpItem\LevelUpItem.cpp">
+      <Filter>Source\Game1\Item\LevelUpItem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

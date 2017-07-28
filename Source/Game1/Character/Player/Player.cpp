@@ -13,6 +13,7 @@
 #include "../../Weapon/Twins/Twins.h"
 #include "../../CollisionManager/CollisionManager.h"
 #include "../../Bullet/Bullet.h"
+#include "../../Item/Item.h"
 #include "../../../GameBase/Utility/UtilityFunction/UtilityFunction.h"
 
 /////////////////////////////////////////////////////
@@ -107,4 +108,32 @@ void Player::Hit(Bullet * bullet)
 	hp_ -= power;
 
 	hp_ = Clamp(hp_, 0, maxHp_);
+}
+
+/////////////////////////////////////////////////////
+// Name : Hit
+//
+// Over View : 当たった時の処理
+//
+// Argument : Itemのポインタ
+//
+// Return : 無し
+/////////////////////////////////////////////////////
+void Player::Hit(Item * item)
+{
+	item->Used(*this);
+}
+
+/////////////////////////////////////////////////////
+// Name : LevelUp
+//
+// Over View : 武器レベルの上昇
+//
+// Argument : 無し
+//
+// Return : 無し
+/////////////////////////////////////////////////////
+void Player::LevelUp()
+{
+	weapon_->LevelUp();
 }

@@ -10,6 +10,7 @@
 #include "../Scene/Scene.h"
 
 class Player;
+class Item;
 
 /////////////////////////////////////////////////////
 // Name : PlayScene
