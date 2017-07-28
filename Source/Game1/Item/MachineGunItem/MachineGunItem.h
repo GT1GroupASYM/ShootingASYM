@@ -1,0 +1,26 @@
+/////////////////////////////////////////////////////
+// Name : MachineGunItem
+//
+// Author : 山田 聖弥
+//
+// Day : 2017/7/28
+/////////////////////////////////////////////////////
+#pragma once
+
+#include "../Item.h"
+
+/////////////////////////////////////////////////////
+// Name : MachineGunItem
+//
+// Over View : マシンガンに交換するアイテム
+/////////////////////////////////////////////////////
+class MachineGunItem :public Item
+{
+public:
+	MachineGunItem();
+	~MachineGunItem();
+
+	bool Update() override;
+	void Used(Player& player) override;
+};
+

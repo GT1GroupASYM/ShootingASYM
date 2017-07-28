@@ -137,3 +137,19 @@ void Player::LevelUp()
 {
 	weapon_->LevelUp();
 }
+
+/////////////////////////////////////////////////////
+// Name : ChangeWeapon
+//
+// Over View : •Ší‚Ì•ÏX
+//
+// Argument : V‚µ‚¢•Ší
+//
+// Return : –³‚µ
+/////////////////////////////////////////////////////
+void Player::ChangeWeapon(std::shared_ptr<Weapon> newWeapon)
+{
+	if (weapon_->ID() == newWeapon->ID()) return;
+
+	weapon_ = newWeapon;
+}

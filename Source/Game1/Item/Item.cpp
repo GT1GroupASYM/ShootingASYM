@@ -18,8 +18,7 @@
 Item::Item()
 	:hit_(false)
 {
-	sprite_.reset(new Sprite(L"Resources\\Images\\LevelUpItem.png", RECT{ 0,0,32,32 }));
-	sprite_->Origine(Math::Vector2(16, 16));
+
 }
 
 /////////////////////////////////////////////////////

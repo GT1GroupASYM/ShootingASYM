@@ -98,6 +98,12 @@
     <Filter Include="Source\Game1\ItemManager">
       <UniqueIdentifier>{cb604ed3-18a5-4c9a-8067-76e656443e72}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Game1\Item\MachineGunItem">
+      <UniqueIdentifier>{d96bfcfc-19e9-4826-82d7-a7e0c6216179}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game1\Item\TwinsItem">
+      <UniqueIdentifier>{612664e7-7304-4570-ae4f-2e491bfca03d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -186,6 +192,12 @@
     <ClInclude Include="Source\Game1\Item\LevelUpItem\LevelUpItem.h">
       <Filter>Source\Game1\Item\LevelUpItem</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Game1\Item\MachineGunItem\MachineGunItem.h">
+      <Filter>Source\Game1\Item\MachineGunItem</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game1\Item\TwinsItem\TwinsItem.h">
+      <Filter>Source\Game1\Item\TwinsItem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -265,6 +277,12 @@
     </ClCompile>
     <ClCompile Include="Source\Game1\Item\LevelUpItem\LevelUpItem.cpp">
       <Filter>Source\Game1\Item\LevelUpItem</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Item\MachineGunItem\MachineGunItem.cpp">
+      <Filter>Source\Game1\Item\MachineGunItem</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game1\Item\TwinsItem\TwinsItem.cpp">
+      <Filter>Source\Game1\Item\TwinsItem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

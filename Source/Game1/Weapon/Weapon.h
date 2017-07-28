@@ -18,6 +18,13 @@ class Weapon
 {
 protected:
 
+	enum WEAPONID
+	{
+		NONE,
+		MACHINEGUN,
+		TWINS
+	};
+
 	//•ŠíƒŒƒxƒ‹
 	int level_;
 
@@ -55,4 +62,7 @@ public:
 
 	//UŒ‚—Í‚Ìæ“¾
 	int Power();
+
+	//•ŠíID‚Ìæ“¾
+	virtual WEAPONID ID() { return NONE; }
 };

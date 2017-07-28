@@ -10,6 +10,8 @@
 #include "../../Character/Player/Player.h"
 #include "../../BulletManager/BulletManager.h"
 #include "../../Item/LevelUpItem/LevelUpItem.h"
+#include "../../Item/MachineGunItem/MachineGunItem.h"
+#include "../../Item/TwinsItem/TwinsItem.h"
 #include "../../ItemManager/ItemManager.h"
 
 /////////////////////////////////////////////////////
@@ -56,6 +58,14 @@ void PlayScene::Initialize()
 	std::shared_ptr<Item> item;
 	item.reset(new LevelUpItem);
 	item->Pos(Math::Vector2(100, 100));
+	ItemManager::GetInstance()->Add(item);
+
+	item.reset(new MachineGunItem);
+	item->Pos(Math::Vector2(200, 100));
+	ItemManager::GetInstance()->Add(item);
+
+	item.reset(new TwinsItem);
+	item->Pos(Math::Vector2(200, 200));
 	ItemManager::GetInstance()->Add(item);
 }
 

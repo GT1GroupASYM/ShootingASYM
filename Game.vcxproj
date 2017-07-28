@@ -168,6 +168,8 @@
     <ClInclude Include="Source\Game1\ItemManager\ItemManager.h" />
     <ClInclude Include="Source\Game1\Item\Item.h" />
     <ClInclude Include="Source\Game1\Item\LevelUpItem\LevelUpItem.h" />
+    <ClInclude Include="Source\Game1\Item\MachineGunItem\MachineGunItem.h" />
+    <ClInclude Include="Source\Game1\Item\TwinsItem\TwinsItem.h" />
     <ClInclude Include="Source\Game1\Scene\PlayScene\PlayScene.h" />
     <ClInclude Include="Source\Game1\Scene\Scene\Scene.h" />
     <ClInclude Include="Source\Game1\Weapon\MachineGun\MachineGun.h" />
@@ -206,6 +208,8 @@
     <ClCompile Include="Source\Game1\ItemManager\ItemManager.cpp" />
     <ClCompile Include="Source\Game1\Item\Item.cpp" />
     <ClCompile Include="Source\Game1\Item\LevelUpItem\LevelUpItem.cpp" />
+    <ClCompile Include="Source\Game1\Item\MachineGunItem\MachineGunItem.cpp" />
+    <ClCompile Include="Source\Game1\Item\TwinsItem\TwinsItem.cpp" />
     <ClCompile Include="Source\Game1\Scene\PlayScene\PlayScene.cpp" />
     <ClCompile Include="Source\Game1\Scene\Scene\Scene.cpp" />
     <ClCompile Include="Source\Game1\Weapon\MachineGun\MachineGun.cpp" />

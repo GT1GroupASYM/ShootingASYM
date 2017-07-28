@@ -5,8 +5,8 @@
 //
 // Day : 2017/7/28
 /////////////////////////////////////////////////////
-#include "../../../../pch.h"
 #include "LevelUpItem.h"
+#include "../../../GameBase/Sprite/Sprite.h"
 #include "../../Character/Player/Player.h"
 #include "../../CollisionManager/CollisionManager.h"
 
@@ -20,6 +20,8 @@
 LevelUpItem::LevelUpItem()
 	:Item()
 {
+	sprite_.reset(new Sprite(L"Resources\\Images\\LevelUpItem.png", RECT{ 0,0,32,32 }));
+	sprite_->Origine(Math::Vector2(16, 16));
 }
 
 /////////////////////////////////////////////////////

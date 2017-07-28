@@ -50,5 +50,8 @@ public:
 
 	//•ŠíƒŒƒxƒ‹‚Ìã¸
 	void LevelUp();
+
+	//•Ší‚Ì•ÏX
+	void ChangeWeapon(std::shared_ptr<Weapon> newWeapon);
 };
 

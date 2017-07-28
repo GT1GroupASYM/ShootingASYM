@@ -15,6 +15,8 @@
 
 using namespace Math;
 
+Weapon::WEAPONID MachineGun::id_ = MachineGun::MACHINEGUN;
+
 /////////////////////////////////////////////////////
 // Name : BulletFire
 //
@@ -146,4 +148,18 @@ void MachineGun::Update(Character& character)
 /////////////////////////////////////////////////////
 void MachineGun::Render()
 {
+}
+
+/////////////////////////////////////////////////////
+// Name : ID
+//
+// Over View : •ŠíID‚Ìæ“¾
+//
+// Argument : –³‚µ
+//
+// Return : •ŠíID
+/////////////////////////////////////////////////////
+Weapon::WEAPONID MachineGun::ID()
+{
+	return id_;
 }

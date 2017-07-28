@@ -36,6 +36,9 @@ private:
 	//球を打つ
 	void BulletFire(DirectX::Mouse* mouse,Character& caracter);
 
+	//武器ID
+	static WEAPONID id_;
+
 public:
 	//コンストラクタ
 	Twins();
@@ -51,5 +54,8 @@ public:
 
 	//描画処理
 	void Render() override;
+
+	//武器IDの取得
+	static WEAPONID ID();
 };
 

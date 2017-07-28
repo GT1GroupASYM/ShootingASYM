@@ -20,6 +20,8 @@
 
 using namespace DirectX::SimpleMath;
 
+Weapon::WEAPONID Twins::id_ = Twins::TWINS;
+
 /////////////////////////////////////////////////////
 // Name : BulletFire
 //
@@ -125,4 +127,18 @@ void Twins::Update(Character & character)
 /////////////////////////////////////////////////////
 void Twins::Render()
 {
+}
+
+/////////////////////////////////////////////////////
+// Name : ID
+//
+// Over View : •ŠíID‚Ìæ“¾
+//
+// Argument : –³‚µ
+//
+// Return : •ŠíID
+/////////////////////////////////////////////////////
+Weapon::WEAPONID Twins::ID()
+{
+	return id_;
 }

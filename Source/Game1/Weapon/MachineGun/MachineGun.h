@@ -35,6 +35,9 @@ private:
 	//球を打つ
 	void Fire(Math::Vector2 pos,Math::Vector2 vel, int dir,int bulletCount);
 
+	//武器ID
+	static WEAPONID id_;
+
 public:
 	//コンストラクタ
 	MachineGun();
@@ -50,5 +53,8 @@ public:
 	
 	//描画処理
 	void Render() override;
+
+	//IDの取得
+	WEAPONID ID() override;
 };
 
