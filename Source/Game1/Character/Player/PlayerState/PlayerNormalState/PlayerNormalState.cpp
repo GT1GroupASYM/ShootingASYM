@@ -5,14 +5,13 @@
 //
 // Day : 2017/7/14
 /////////////////////////////////////////////////////
-#include "../../../../../pch.h"
+#include <d3d11.h>
+#include <SimpleMath.h>
+
 #include "PlayerNormalState.h"
 #include "../../Player.h"
 #include "../../../../Weapon/Weapon.h"
 #include "../../../../../GameBase/ImputManager/InputManager.h"
-
-#include <d3d11.h>
-#include <SimpleMath.h>
 
 using namespace DirectX;
 using namespace DirectX::SimpleMath;

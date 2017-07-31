@@ -1,3 +1,5 @@
-﻿  TwinsItem.cpp
+﻿  MachineGun.cpp
+     ライブラリ C:\Users\s152227\Documents\ShootingASYM\Debug\Game.lib とオブジェクト C:\Users\s152227\Documents\ShootingASYM\Debug\Game.exp を作成中
+pch.obj : warning LNK4204: 'C:\Users\s152227\Documents\ShootingASYM\Debug\vc140.pdb' に参照するモジュールのデバッグ情報がありません。デバッグ情報を無視してオブジェクトをリンクします。
   Game.vcxproj -> C:\Users\s152227\Documents\ShootingASYM\Debug\Game.exe
   Game.vcxproj -> C:\Users\s152227\Documents\ShootingASYM\Debug\Game.pdb (Full PDB)

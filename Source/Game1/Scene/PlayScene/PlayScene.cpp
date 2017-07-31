@@ -5,7 +5,6 @@
 //
 // Day : 2017/7/14
 /////////////////////////////////////////////////////
-#include "../../../../pch.h"
 #include "PlayScene.h"
 #include "../../Character/Player/Player.h"
 #include "../../BulletManager/BulletManager.h"

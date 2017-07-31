@@ -5,7 +5,6 @@
 //
 // Day : 2017/7/7
 /////////////////////////////////////////////////////
-#include "../../pch.h"
 #include "Game1.h"
 #include "Scene\Scene\Scene.h"
 #include "Scene\PlayScene\PlayScene.h"

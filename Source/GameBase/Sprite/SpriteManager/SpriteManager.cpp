@@ -5,10 +5,9 @@
 //
 // Day : 2017/7/7
 /////////////////////////////////////////////////////
-#include "../../../../pch.h"
-
 #include <WICTextureLoader.h>
 
+#include "../../../../pch.h"
 #include "../../../../DeviceResources.h"
 #include "SpriteManager.h"
 

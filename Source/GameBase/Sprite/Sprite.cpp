@@ -5,7 +5,6 @@
 //
 // Day : 2017/7/7
 /////////////////////////////////////////////////////
-#include "../../../pch.h"
 #include "Sprite.h"
 #include "SpriteManager/SpriteManager.h"
 

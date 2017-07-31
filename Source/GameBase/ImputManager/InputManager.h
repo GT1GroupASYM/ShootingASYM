@@ -7,11 +7,11 @@
 /////////////////////////////////////////////////////
 #pragma once
 
+#include <d3d11.h>
+#include <SimpleMath.h>
 #include <memory>
 #include <Mouse.h>
 #include <Keyboard.h>
-#include <d3d11.h>
-#include <SimpleMath.h>
 
 #include "../Utility/Singleton/Singleton.h"
 

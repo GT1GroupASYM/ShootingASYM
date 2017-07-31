@@ -5,7 +5,6 @@
 //
 // Day : 2017/7/14
 /////////////////////////////////////////////////////
-#include "../../../pch.h"
 #include "Character.h"
 #include "../../GameBase/Sprite/Sprite.h"
 

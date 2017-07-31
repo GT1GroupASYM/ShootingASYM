@@ -5,6 +5,7 @@
 //
 // Day : 2017/7/28
 /////////////////////////////////////////////////////
+#include "../../../../pch.h"
 #include "MachineGunItem.h"
 #include "../../../GameBase/Sprite/Sprite.h"
 #include "../../Weapon/MachineGun/MachineGun.h"
